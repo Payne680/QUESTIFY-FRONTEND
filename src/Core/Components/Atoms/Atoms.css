@@ -1,0 +1,32 @@
+input {
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    background: #224957;
+    color: #fff;
+    margin: 5px;
+    border: 1px solid #224957;
+}
+::placeholder {
+    color: #fff;
+}
+button {
+    width: 300px;
+    height: 45px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #20DF7f;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+}
+
+.footer img {
+    width: 100%;
+    bottom: 0;
+}
