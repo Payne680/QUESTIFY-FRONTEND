@@ -4,18 +4,22 @@ input {
     border-radius: 10px;
     background: #224957;
     color: #fff;
-    margin: 5px;
+    margin: 11px;
+    padding: 10px;
     border: 1px solid #224957;
 }
 ::placeholder {
     color: #fff;
+    
 }
 button {
     width: 300px;
     height: 45px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 10px;
-    background-color: #20DF7f;
+    color: #224957;
+    font-weight: bold;
+    background-color: #76B1A6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     border: none;

@@ -1,0 +1,65 @@
+body {
+  overflow: hidden;
+}
+.headz {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  width: 347px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+h1 {
+  margin: 50px;
+  height: 35px;
+  font-family: 'lexand Deca';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  color: #224957;
+}
+p {
+  height: 20px;
+  font-family: 'lexand Deca';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #224957;
+}
+
+.accountz {
+  display: flex;
+}
+
+.linkz {
+  color: #76b1a6;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-left: 23px;
+}
+
+.signz {
+  padding-left: 150px;
+}
+
+.titlez {
+  color: #224957;
+}
+.creatz {
+    display: flex;
+}
+.imagez {
+  display: flex;
+  width: 80%;
+  height: 100vh;
+}

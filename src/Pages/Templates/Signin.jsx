@@ -13,13 +13,19 @@ export default function Signin() {
     e.preventDefault();
   };
   return (
-    <div className="signin">
+    <div className="headz">
       <form onSubmit={handleSubmit}>
         <Header title="Login" />
         <p>Login and start managing your oraganization</p>
         <p>{isLoading ? 'Loading...' : ''}</p>
         <Input2 type="email" placeholder="Email Address" />
         <Input2 type="password" placeholder="Password" />
+        <div className="linkz">
+          <p>Forgot Password?</p>
+          <Link className="titlez" to="/signup">
+            <p className="accountz">No account? Sign Up</p>
+          </Link>
+        </div>
         <Link to="/dashboard">
           <Btn title="Login" />
         </Link>

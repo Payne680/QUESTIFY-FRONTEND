@@ -14,31 +14,23 @@ export default function Signup() {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="headz">
       <form onSubmit={handleSubmit}>
         <Header title="Sign up" />
         <p>Sign up and start managing your oraganization</p>
         <p>{isLoading ? 'Loading...' : ''}</p>
-        <Input type="text" placeholder="First Name" />
-        <Input type="text" placeholder="Last Name" />
+        <Input type="text" placeholder="Username" />
         <Input type="email" placeholder="Email Address" />
         <Input type="phone" placeholder="Phone Number" />
         <Input type="password" placeholder="Password" />
-        <Input
-          type="password"
-          placeholder="Password Confirmation"
-          name="passwordConfirmation"
-        />
         {error && <p className="error">{error}</p>}
-        <Link to="/login">
+        <Link className="titlez" to="/login">
+          <p className="signz">Have an account? login</p>
+        </Link>
+
+        <Link to="/create-first-team">
           <Btn title="Sign up" />
         </Link>
-        {/* <p>
-          Have an account?
-          <Link className="linkz" to="/login">
-            login
-          </Link>
-        </p> */}
       </form>
       <Footerdesign />
     </div>
