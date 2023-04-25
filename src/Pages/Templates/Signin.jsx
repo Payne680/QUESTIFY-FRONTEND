@@ -22,7 +22,7 @@ export default function Signin() {
         <Input2 type="password" placeholder="Password" />
         <div className="linkz">
           <p>Forgot Password?</p>
-          <Link className="titlez" to="/signup">
+          <Link className="titlez" to="/">
             <p className="accountz">No account? Sign Up</p>
           </Link>
         </div>
