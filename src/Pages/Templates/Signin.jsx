@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Styles.css';
-import Input2 from '../../Core/Components/Atoms/Input';
-import Btn from '../../Core/Components/Atoms/Button';
-import Header from '../../Core/Components/Atoms/Header';
-import Footerdesign from '../../Core/Components/Atoms/Footerdesign';
+import Header from '../../Components/Atoms/Headings/Header';
+import Button from '../../Components/Atoms/Buttons/Button';
+import Input from '../../Components/Atoms/Inputs/Input';
+import Footerdesign from './Footerdesign';
 
 export default function Signin() {
   const [isLoading] = useState(false);
@@ -18,16 +18,16 @@ export default function Signin() {
         <Header title="Login" />
         <p>Login and start managing your oraganization</p>
         <p>{isLoading ? 'Loading...' : ''}</p>
-        <Input2 type="email" placeholder="Email Address" />
-        <Input2 type="password" placeholder="Password" />
+        <Input type="email" placeholder="Email Address" />
+        <Input type="password" placeholder="Password" />
         <div className="linkz">
           <p>Forgot Password?</p>
-          <Link className="titlez" to="/">
+          <Link className="titlez" to="/signup">
             <p className="accountz">No account? Sign Up</p>
           </Link>
         </div>
         <Link to="/dashboard">
-          <Btn title="Login" />
+          <Button title="Login" />
         </Link>
         {/* <p>
           Have an account?

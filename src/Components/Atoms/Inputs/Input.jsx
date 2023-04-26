@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import './Atoms.css';
+import '../Atoms.css';
 
 function Input({ type, value, placeholder }) {
   return (

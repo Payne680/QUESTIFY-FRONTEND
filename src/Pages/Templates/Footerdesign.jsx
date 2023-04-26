@@ -1,11 +1,13 @@
 import React from 'react';
 import logo from './Vectors.svg';
-import './Atoms.css';
+import './Styles.css';
 
 function Footerdesign() {
   return (
-    <div className="footer">
-      <img alt="" src={logo} />
+    <div className="foot">
+      <footer>
+        <img alt="" src={logo} />
+      </footer>
     </div>
   );
 }

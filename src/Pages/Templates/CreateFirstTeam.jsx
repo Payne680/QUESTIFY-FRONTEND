@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import quest from './quest.svg';
-import Header from '../../Core/Components/Atoms/Header';
-import Input from '../../Core/Components/Atoms/Input';
-import Btn from '../../Core/Components/Atoms/Button';
+import Header from '../../Components/Atoms/Headings/Header';
+import Input from '../../Components/Atoms/Inputs/Input';
+import Button from '../../Components/Atoms/Buttons/Button';
 
 function CreateFirstTeam() {
   return (
@@ -30,7 +30,7 @@ function CreateFirstTeam() {
             Invite your team members so they can see what you are working on.
           </p>
         </div>
-        <Btn title="Create your workspace" />
+        <Button title="Create your workspace" />
       </div>
     </div>
   );

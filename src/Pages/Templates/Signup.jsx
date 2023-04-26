@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Styles.css';
-import Input from '../../Core/Components/Atoms/Input';
-import Btn from '../../Core/Components/Atoms/Button';
-import Header from '../../Core/Components/Atoms/Header';
-import Footerdesign from '../../Core/Components/Atoms/Footerdesign';
+import Input from '../../Components/Atoms/Inputs/Input';
+import Header from '../../Components/Atoms/Headings/Header';
+import Button from '../../Components/Atoms/Buttons/Button';
+import Footerdesign from './Footerdesign';
 
 export default function Signup() {
   const [isLoading] = useState(false);
@@ -29,7 +29,7 @@ export default function Signup() {
         </Link>
 
         <Link to="/create-first-team">
-          <Btn title="Sign up" />
+          <Button title="Sign up" />
         </Link>
       </form>
       <Footerdesign />
