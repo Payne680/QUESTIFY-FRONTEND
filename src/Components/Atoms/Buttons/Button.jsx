@@ -1,5 +1,4 @@
 import React from 'react';
-import './Button.css';
 
 // eslint-disable-next-line
 export default function Button({ height, title, width }) {
