@@ -1,0 +1,7 @@
+.attributes {
+  display: flex;
+  gap: 40px;
+  justify-content: right;
+  right: 3%;
+  position: relative;
+}

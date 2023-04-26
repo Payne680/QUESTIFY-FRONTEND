@@ -1,0 +1,19 @@
+.male {
+  left: 15%;
+  position: relative;
+}
+
+.elements {
+  bottom: 1%;
+  left: 28%;
+  position: absolute;
+  width: 30%;
+}
+
+.dot {
+  bottom: 1%;
+  left: 31%;
+  position: absolute;
+  width: 38%;
+  top: 65%;
+}

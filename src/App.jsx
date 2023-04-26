@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Landing from './Pages/Landing/Homepage';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-    <h1>Happy Coding</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<Landing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

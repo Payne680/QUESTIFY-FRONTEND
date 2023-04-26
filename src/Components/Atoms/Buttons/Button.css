@@ -1,0 +1,14 @@
+.btn {
+  background: #76b1a6;
+  border: 0.8px solid #76B1a6;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  padding: 9px 35px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+}
