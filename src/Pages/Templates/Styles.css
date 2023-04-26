@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 form {
@@ -124,6 +125,9 @@ p {
     width: 100%;
 }
 .foot footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
     margin: 0% 0%;
     bottom: 0;
 }
