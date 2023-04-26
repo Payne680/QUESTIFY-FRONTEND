@@ -9,15 +9,25 @@ import './RightSide.css';
 export default function RightSide() {
   return (
     <div>
-      <img className="male" src={boy} alt="male" />
-      <Heading title="Stay organized and connected" size="38px" width="80%" />
-      <Paragraph
-        title="Bring your team's work together in one shared space. Choose the project view that suits your style, and collaborate no matter where you are."
-        size="19px"
-        width="80%"
-      />
-      <img className="elements" src={element} alt="elements" />
-      <img className="dot" src={vector} alt="dot-line" />
+      <div className="boyz">
+        <img className="male" src={boy} alt="male" />
+        <div className="textz">
+          <Heading
+            title="Stay organized and connected"
+            size="35px"
+            width="90%"
+          />
+          <Paragraph
+            title="Bring your team's work together in one shared space. Choose the project view that suits your style, and collaborate no matter where you are."
+            size="20px"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div className="vectorz">
+        <img className="elements" src={element} alt="elements" />
+        <img className="dot" src={vector} alt="dot-line" />
+      </div>
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import './Paragraph.css';
 
 // eslint-disable-next-line
-export default function Paragraph({ title, color, size, width }) {
+export default function Paragraph({ title, color, size, width, height }) {
   return (
     <div>
-      <p style={{ color, fontSize: size, width }}>{title}</p>
+      <p style={{ color, fontSize: size, width, height }}>{title}</p>
     </div>
   );
 }

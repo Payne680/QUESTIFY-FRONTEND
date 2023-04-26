@@ -1,11 +1,27 @@
+.envelopez {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  justify-content: flex-start;
+}
+
+.para {
+  margin-top: 10%;
+  margin-bottom: 25px;
+  right: 40px;
+}
+
+.girl {
+  margin-top: 20px;
+}
+
 .envlope {
   left: 32%;
-  position: absolute;
   top: 27%;
 }
 
 .circle {
-  position: absolute;
-  left: 4%;
-  top: 26%;
+  right: 10%;
+  top: 20%;
+  width: 200px;
 }

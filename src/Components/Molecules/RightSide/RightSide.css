@@ -1,5 +1,13 @@
+.boyz {
+  margin-bottom: 200px;
+}
+
+.textz {
+  text-align: left;
+  justify-content: center;
+}
+
 .male {
-  left: 15%;
   position: relative;
 }
 
@@ -12,8 +20,8 @@
 
 .dot {
   bottom: 1%;
-  left: 31%;
   position: absolute;
-  width: 38%;
-  top: 65%;
+  left: 40%;
+  width: 33%;
+  top: 68%;
 }
