@@ -20,14 +20,15 @@ export default function Signin() {
       emailAddress: target.emailAddress.value,
       password: target.password.value,
     };
+    console.log(user);
     setIsLoading(true);
     try {
       const { data } = await login(user.emailAddress, user.password);
       saveToken(data.token);
       navigate('/dashboard');
       window.location.reload(true);
-    } catch {
-      if (e.response.status === 401) {
+    } catch (event) {
+      if (event.response.status === 401) {
         setError('Invalid username or passeword');
       }
     } finally {
@@ -54,7 +55,7 @@ export default function Signin() {
             <p className="accountz">No account? Sign Up</p>
           </Link>
         </div>
-        <Button title="Login" />
+        <Button type="submit" title="Login" />
         {/* <p>
           Have an account?
           <Link className="linkz" to="/login">
