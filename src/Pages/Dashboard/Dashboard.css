@@ -35,13 +35,14 @@
       align-items: center;
       justify-content: space-between;
       color: #fff;
+      font-family: 'Lexand Deca';
   }
   .header > :nth-child(1)
   {
       font-size: 1.2rem;
   }
   .searchBar{
-      background-color: rgba(255, 255, 255, 0.496);
+      background-color: rgba(0, 0, 0, 0.496);
       width: 30%;
       max-width: 25rem;
       padding: 1rem 1rem;
@@ -52,6 +53,7 @@
       border: 2px solid rgb(63, 63, 63);
       justify-content: center;
       gap: 8px;
+      border: none;
   }
   
   .searchBar >   input{

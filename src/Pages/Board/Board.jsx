@@ -44,13 +44,13 @@ function BoardPage() {
           'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 189, 220) 163.54%)',
       };
     }
-    if (title === 'Doing') {
+    if (title === 'In progress') {
       return {
         background:
           'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(220, 48, 48) 163.54%)',
       };
     }
-    if (title === 'Completed') {
+    if (title === 'Done') {
       return {
         background:
           'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 220, 86) 163.54%)',

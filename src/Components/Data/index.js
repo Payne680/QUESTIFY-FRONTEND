@@ -31,7 +31,7 @@ export const boardData = {
     },
     {
       id: 3,
-      title: 'Doing',
+      title: 'In progress',
       cards: [
         {
           id: 10,
@@ -48,7 +48,7 @@ export const boardData = {
     },
     {
       id: 4,
-      title: 'Completed',
+      title: 'Done',
       cards: [
         {
           id: 12,
