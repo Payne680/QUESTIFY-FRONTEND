@@ -59,7 +59,7 @@ p {
 }
 
 .linkz {
-  color: #76b1a6;
+  /* color: #76b1a6; */
   display: flex;
   justify-content: space-between;
   width: 300px;

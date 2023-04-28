@@ -4,6 +4,8 @@ import Signup from './Pages/Templates/Signup';
 import Signin from './Pages/Templates/Signin';
 import CreateFirstTeam from './Pages/Templates/CreateFirstTeam';
 import Landing from './Pages/Landing/Homepage';
+import BoardPage from './Pages/Board/Board';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 export default function App() {
   return (
@@ -13,6 +15,9 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="signup" element={<Signup />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route path="board" element={<BoardPage />} />
+          </Route>
           <Route path="login" element={<Signin />} />
         </Routes>
       </div>
