@@ -10,13 +10,12 @@ function Sidebar() {
     <div className={css.container}>
       <img alt="logo" src={logo} className={css.logo} />
       <div className={css.menu}>
-        <NavLink to="/dashboard" className={css.item} title="Dashboard">
-          <MdSpaceDashboard size={30} />
-        </NavLink>
         <NavLink to="board" className={css.item} title="Board">
           <FaTasks size={30} />
         </NavLink>
-
+        <NavLink to="/dashboard" className={css.item} title="Dashboard">
+          <MdSpaceDashboard size={30} />
+        </NavLink>
         <NavLink to="/dashboard" className={css.item} title="Calendar">
           <AiFillCalendar size={30} />
         </NavLink>

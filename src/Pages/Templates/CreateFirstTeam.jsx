@@ -34,7 +34,7 @@ function CreateFirstTeam() {
             </p>
           </div>
 
-          <Link to="/dashboard">
+          <Link to="/dashboard/board">
             <Button title="Create your workspace" />{' '}
           </Link>
         </div>

@@ -14,7 +14,7 @@ function Dashboard() {
       <Sidebar />
 
       {/* making the dashboard as the default route */}
-      {pathname === '/' && <Navigate to="/dashboard" />}
+      {pathname === '/' && <Navigate to="/board" />}
 
       <div className="dashboard">
         <div className="topBaseGradients">
