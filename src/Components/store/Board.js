@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { create } from 'zustand';
-import { boardData } from '../Data';
+import { boardData } from '../data';
 
 const useBoard = create((set) => ({
   board: boardData,
