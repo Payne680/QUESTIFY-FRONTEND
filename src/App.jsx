@@ -4,9 +4,8 @@ import Signup from './Pages/Templates/Signup';
 import Signin from './Pages/Templates/Signin';
 import CreateFirstTeam from './Pages/Templates/CreateFirstTeam';
 import Landing from './Pages/Landing/Homepage';
-import BoardPage from './Pages/Board/Board';
 import Dashboard from './Pages/Dashboard/Dashboard';
-import BoardPach from './Test/Test';
+import BoardPage from './Pages/BoardPage/BoardPage';
 
 export default function App() {
   return (
@@ -20,7 +19,6 @@ export default function App() {
             <Route path="board" element={<BoardPage />} />
           </Route>
           <Route path="login" element={<Signin />} />
-          <Route path="test" element={<BoardPach />} />
         </Routes>
       </div>
     </BrowserRouter>

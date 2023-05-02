@@ -1,0 +1,50 @@
+.board {
+    min-width: 290px;
+    max-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.board p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.board-top {
+    display: flex;
+}
+
+.board-top-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.board-top-title span {
+    color: gray;
+}
+
+.board-cards {
+    height: 100%;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.597);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 10px;
+    overflow-y: auto;
+}
+
+.board-cards-add {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.board-cards-add:hover {
+    box-shadow: 1px 2px 1px #ccc;
+}
