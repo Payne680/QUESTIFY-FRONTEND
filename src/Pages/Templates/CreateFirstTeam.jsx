@@ -41,15 +41,21 @@ function CreateFirstTeam() {
           <p className="inputx">Name your workspace</p>
           <Input type="text" placeholder="Questify Workspace" />
           <p>You can also edit this name in your work space </p>
-          <p className="inputx">Who's on your team? </p>
-          <form className="addTeam" onSubmit={handleInvite}>
-            <Input
-              type="text"
-              placeholder="Enter as many email address as you want..."
-              name="email"
-            />
-            <Button title="add" />
-          </form>
+
+          <div className="form_control">
+            <p className="inputx">Who's on your team? </p>
+            <form className="addTeam" onSubmit={handleInvite}>
+              <Input
+                type="text"
+                placeholder="Enter as many email address as you want..."
+                name="email"
+              />
+              <div className="btn_email">
+                <Button title="add" width="100%" />
+              </div>
+            </form>
+          </div>
+
           <div className="team">
             {members?.map((team, i) => {
               return (
@@ -63,11 +69,13 @@ function CreateFirstTeam() {
               );
             })}
           </div>
+        </div>
+        <div className="btn_create_workspace">
           <p>
             Invite your team members so they can see what you are working on.
           </p>
+          <Button title="Create your workspace" />
         </div>
-        <Button title="Create your workspace" />
       </div>
     </div>
   );
