@@ -1,0 +1,16 @@
+.invitations {
+  display: flex;
+  gap: 10px;
+  line-break: auto;
+}
+
+.cross {
+  cursor: pointer;
+  background-color: brown;
+  padding: 0.2rem;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}

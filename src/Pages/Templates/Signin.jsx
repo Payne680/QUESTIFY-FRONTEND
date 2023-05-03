@@ -20,7 +20,6 @@ export default function Signin() {
       emailAddress: target.emailAddress.value,
       password: target.password.value,
     };
-    console.log(user);
     setIsLoading(true);
     try {
       const { data } = await login(user.emailAddress, user.password);
