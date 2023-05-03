@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
@@ -8,6 +9,7 @@ import './Editable.css';
 
 function Editable(props) {
   const [showEdit, setShowEdit] = useState(false);
+  const [inputValue, setInputValue] = useState('');
   return (
     <div className="editable">
       {showEdit ? (
@@ -15,12 +17,17 @@ function Editable(props) {
           className={`editable-edit ${props.editClass || ''} `}
           onSubmit={(e) => {
             e.preventDefault();
-            if (props.onSubmit) props.onSubmit();
+            if (props.onSubmit) props.onSubmit(inputValue);
+            setShowEdit(false);
+            setInputValue('');
           }}
         >
           <X onClick={() => setShowEdit(false)} />
           <input
+            autoFocus
             type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             defaultValue={props.text}
             placeholder={props.placeholder || 'Enter item'}
           />

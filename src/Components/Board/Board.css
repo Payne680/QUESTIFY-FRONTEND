@@ -7,6 +7,12 @@
     gap: 20px;
 }
 
+.board-top-more {
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+}
+
 .board p {
     font-size: 16px;
     line-height: 28px;
@@ -16,11 +22,24 @@
     display: flex;
 }
 
+.board-dropdown {
+    background-color: #fff;
+    width: 115px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.board-dropdown p {
+    cursor: pointer;
+}
+
 .board-top-title {
     flex: 1;
     display: flex;
     align-items: center;
     font-weight: bold;
+    gap: 5px;
 }
 
 .board-top-title span {
@@ -30,7 +49,7 @@
 .board-cards {
     height: 100%;
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.597);
+    /* background-color: rgba(255, 255, 255, 0.597); */
     display: flex;
     flex-direction: column;
     gap: 10px;

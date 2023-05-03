@@ -27,3 +27,18 @@
     display: flex;
     gap: 30px;
 }
+
+.board-page-column {
+    min-width: 290px;
+    width: 290px;
+}
+
+.board-page-column-add {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.board-page-column-add:hover {
+    box-shadow: 1px 2px 1px #ccc;
+}

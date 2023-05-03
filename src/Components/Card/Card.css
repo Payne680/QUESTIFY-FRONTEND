@@ -47,3 +47,17 @@
     display: flex;
     gap: 5px;
 }
+
+.card-top-more {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-dropdown {
+    color: #fff;
+    background-color: #ea6f6f;
+    width: 115px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.15);
+}
