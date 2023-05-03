@@ -16,17 +16,15 @@ function CreateFirstTeam() {
     e.preventDefault();
     const data = e.target.email.value;
     setMembers([...members, data]);
+    e.target.email.value = '';
   };
 
   function deleteInvitation(id) {
     const filter = members.filter((elements) => {
-      console.log(elements);
       return elements !== id;
     });
     setMembers(filter);
   }
-
-  console.log(members);
 
   return (
     <div className="creatz">
