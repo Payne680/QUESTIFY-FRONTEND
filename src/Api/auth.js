@@ -7,3 +7,7 @@ export function register(user) {
 export function login(emailAddress, password) {
   return httpClient.post('users/login', { emailAddress, password });
 }
+
+export function addTeam(team) {
+  return httpClient.post('notifications', team);
+}
