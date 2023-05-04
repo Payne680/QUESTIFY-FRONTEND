@@ -113,6 +113,8 @@ function BoardPage() {
 
     tempBoards[s_bIndex].cards.splice(s_cIndex, 1);
     tempBoards[t_bIndex].cards.splice(t_cIndex, 0, tempCard);
+
+    setBoards(tempBoards);
   };
 
   const handleDragEnter = (cid, bid) => {
