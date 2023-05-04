@@ -2,7 +2,7 @@
 import React from 'react';
 import '../Atoms.css';
 
-function Input({ type, value, placeholder, name }) {
+function Input({ type, value, placeholder, name, onChange }) {
   return (
     <div>
       <input
@@ -11,6 +11,7 @@ function Input({ type, value, placeholder, name }) {
         placeholder={placeholder}
         name={name}
         required
+        onChange={onChange}
       />
     </div>
   );
