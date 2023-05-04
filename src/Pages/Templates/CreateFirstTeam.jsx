@@ -8,15 +8,29 @@ import Header from '../../Components/Atoms/Headings/Header';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
 import './CreateFirst.css';
+import { invitations } from '../../Api/auth';
 
 function CreateFirstTeam() {
   const [members, setMembers] = useState([]);
+  const [projects, setProjects] = useState();
+
+  const handleChange = (e) => {
+    const project = e.target.value;
+    setProjects(project);
+  };
 
   const handleInvite = (e) => {
     e.preventDefault();
     const data = e.target.email.value;
-    setMembers([...members, data]);
+    const invite = [...members];
+    invite.push({ email: data });
+    setMembers(invite);
     e.target.email.value = '';
+  };
+
+  const createWorkPlace = () => {
+    console.log(members, projects);
+    invitations(members);
   };
 
   function deleteInvitation(id) {
@@ -39,7 +53,12 @@ function CreateFirstTeam() {
         </h2>
         <div className="detailz">
           <p className="inputx">Name your workspace</p>
-          <Input type="text" placeholder="Questify Workspace" />
+          <Input
+            type="text"
+            placeholder="Questify Workspace"
+            name="project"
+            onChange={handleChange}
+          />
           <p>You can also edit this name in your work space </p>
 
           <div className="form_control">
@@ -61,7 +80,7 @@ function CreateFirstTeam() {
               return (
                 <div key={i} className="teamMember invitations">
                   <p>&#x2713;</p>
-                  <p> {team} </p>
+                  <p> {team.email} </p>
                   <p onClick={() => deleteInvitation(team)} className="cross">
                     &#x2717;
                   </p>
@@ -74,7 +93,11 @@ function CreateFirstTeam() {
           <p>
             Invite your team members so they can see what you are working on.
           </p>
-          <Button title="Create your workspace" />
+          <Button
+            type="submit"
+            title="Create your workspace"
+            onClick={createWorkPlace}
+          />
         </div>
       </div>
     </div>

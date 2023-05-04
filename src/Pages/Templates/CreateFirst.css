@@ -30,6 +30,10 @@
   position: absolute;
 }
 
+.create_work {
+  width: 100%;
+}
+
 .team {
   margin-top: 20%;
 }
