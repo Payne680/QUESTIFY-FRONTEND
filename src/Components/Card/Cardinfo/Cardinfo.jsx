@@ -3,7 +3,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { Calendar, CheckSquare, List, Trash, Type, UserPlus } from 'react-feather';
+import {
+  Calendar,
+  CheckSquare,
+  List,
+  Trash,
+  Type,
+  UserPlus,
+} from 'react-feather';
 import Modals from '../../Modal/Modal';
 import Editable from '../../Editable/Editable';
 import './Cardinfo.css';
