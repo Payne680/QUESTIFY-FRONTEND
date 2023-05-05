@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: #ccc;
+    border-radius: 5px;
 }
 
 .board-top-more {
@@ -59,11 +61,12 @@
 }
 
 .board-cards-add {
+    width: 100%;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 .board-cards-add:hover {
-    box-shadow: 1px 2px 1px #ccc;
+    box-shadow: 1px 2px 1px green;
 }

@@ -12,10 +12,12 @@
     gap: 5px;
 }
 
-.card-top-lables {
+.card-top-avatar {
     flex: 1;
     display: flex;
     gap: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .card-top svg {

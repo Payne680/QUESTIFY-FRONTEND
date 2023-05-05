@@ -1,5 +1,5 @@
 .editable {
-    width: 100%;
+    width: fit-content;
 }
 
 .editable-display {
@@ -10,7 +10,7 @@
 }
 
 .editable-display:hover {
-    background-color: #ccc;
+    background-color: #f1f1f1;
 }
 
 .editable-edit {

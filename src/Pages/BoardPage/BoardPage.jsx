@@ -16,12 +16,6 @@ function BoardPage() {
           id: Date.now() + Math.random(),
           title: 'Card 1',
           task: [],
-          lables: [
-            {
-              text: 'frontend',
-              color: 'green',
-            },
-          ],
           desc: 'Wassup malone',
           date: '',
         },
@@ -29,12 +23,6 @@ function BoardPage() {
           id: Date.now() + Math.random(),
           title: 'Card 2',
           task: [],
-          lables: [
-            {
-              text: 'backend',
-              color: 'black',
-            },
-          ],
           desc: 'Wassup Penn',
           date: '',
         },
