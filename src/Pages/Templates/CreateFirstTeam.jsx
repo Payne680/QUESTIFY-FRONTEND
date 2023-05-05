@@ -65,7 +65,7 @@ function CreateFirstTeam() {
             <p className="inputx">Who's on your team? </p>
             <form className="addTeam" onSubmit={handleInvite}>
               <Input
-                type="text"
+                type="email"
                 placeholder="Enter as many email address as you want..."
                 name="email"
               />
