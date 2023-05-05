@@ -1,0 +1,20 @@
+.userProfil {
+  align-items: center;
+  display: flex;
+}
+
+.userProfil img {
+  border-radius: 50%;
+  height: 32px;
+  margin-right: 10px;
+  object-fit: cover;
+  width: 32px;
+}
+
+.userEdit {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  position: relative;
+  right: 60%;
+} 

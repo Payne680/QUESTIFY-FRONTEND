@@ -19,6 +19,7 @@ export default function App() {
             <Route path="board" element={<BoardPage />} />
           </Route>
           <Route path="login" element={<Signin />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </BrowserRouter>
