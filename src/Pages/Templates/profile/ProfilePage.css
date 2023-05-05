@@ -1,0 +1,53 @@
+.editProfile {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  width: 80%;
+  justify-content: center;
+  gap: 8%;
+}
+
+.editProfile .leftSide {
+  font-family: 'Podkova', serif;
+  min-height: 50vh;
+  width: 35vw;
+}
+
+.leftSide h3 {
+  line-height: 0.5;
+  margin-bottom: -0.1px;
+}
+
+.inputField {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #76b1a6;
+  border-radius: 10px;
+  height: 400px;
+  width: 100%;
+}
+
+.inputs {
+  background: white;
+  color: #224957;
+  height: 25px;
+  border: 1px solid #76b1a6;
+  font-size: 17px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.head {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.editText {
+  position: relative;
+  text-align: center;
+  top: 35%;
+}
+
+.bttn {
+  width: 105%;
+}
