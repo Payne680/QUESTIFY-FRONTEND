@@ -6,7 +6,7 @@ import Button from '../../../Components/Atoms/Buttons/Button';
 export default function profilePage() {
   return (
     <div className="editProfile">
-      <div className="leftSide">
+      <form className="leftSide">
         <h1 className="head">My Profil</h1>
         <h2>Personal Information</h2>
         <h3>Username</h3>
@@ -21,7 +21,7 @@ export default function profilePage() {
           className="bttn"
           title="Edit Account"
         />
-      </div>
+      </form>
       <div className="rightSide">
         <h2>Members Registration</h2>
         <div className="inputField">
