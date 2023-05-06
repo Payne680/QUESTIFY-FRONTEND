@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars */
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from '@mui/icons-material';
@@ -32,6 +34,7 @@ const columns = [
       return (
         <div className="userEdit">
           <button
+            type="button"
             style={{
               width: '80%',
               background: 'lightgreen',
@@ -96,7 +99,7 @@ export default function DataTable() {
   return (
     <Box
       sx={{
-        background: 'white',
+        background: '#ccc',
         height: 580,
         width: '100%',
       }}

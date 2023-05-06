@@ -2,8 +2,12 @@
   align-items: center;
   display: flex;
   margin: auto;
-  width: 80%;
+  width: 90%;
   justify-content: center;
+  line-height: 20px;
+  padding: 150px 0px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .editProfile .leftSide {
@@ -22,7 +26,7 @@
   background: #fff;
   border: 1px solid #76b1a6;
   border-radius: 10px;
-  height: 400px;
+  height: 90%;
   width: 400px;
 }
 
@@ -34,6 +38,7 @@
   font-size: 17px;
   border-radius: 5px;
   width: 100%;
+  height: 6vh;
 }
 
 .head {
@@ -45,8 +50,9 @@
   position: relative;
   text-align: center;
   top: 35%;
+  height: 100px;
 }
 
 .bttn {
-  width: 105%;
+  width: 100%;
 }

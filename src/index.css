@@ -44,7 +44,7 @@ body {
   width: 100vw;
   background-color: var(--black);
   color: white;
-  font-family: "Public Sans", sans-serif;
+  font-family: 'Public Sans', sans-serif;
   overflow: hidden;
 }
 

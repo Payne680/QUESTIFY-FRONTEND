@@ -6,6 +6,8 @@ import CreateFirstTeam from './Pages/Templates/CreateFirstTeam';
 import Landing from './Pages/Landing/Homepage';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
+import ProfilePage from './Pages/Templates/profile/ProfilePage';
+import DataTable from './Pages/Templates/userList/UserList';
 
 export default function App() {
   return (
@@ -17,9 +19,10 @@ export default function App() {
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route path="board" element={<BoardPage />} />
+            <Route path="profile" element={<ProfilePage />} />
+            <Route path="members" element={<DataTable />} />
           </Route>
           <Route path="login" element={<Signin />} />
-          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </BrowserRouter>
