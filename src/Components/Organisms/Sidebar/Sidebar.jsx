@@ -16,7 +16,7 @@ function Sidebar() {
         <NavLink to="board" className={css.item} title="Board">
           <FaTasks size={30} />
         </NavLink>
-        <NavLink to="/dashboard" className={css.item} title="Calendar">
+        <NavLink to="list" className={css.item} title="Calendar">
           <AiFillCalendar size={30} />
         </NavLink>
 
