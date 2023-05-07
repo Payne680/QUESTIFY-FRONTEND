@@ -34,7 +34,7 @@ function CreateFirstTeam() {
   const createWorkPlace = () => {
     console.log(members, projects);
     invitations(members);
-    navi('/board');
+    navi('/dashboard/board');
   };
 
   function deleteInvitation(id) {
@@ -75,7 +75,7 @@ function CreateFirstTeam() {
                   name="email"
                 />
                 <div className="btn_email">
-                  <Button title="add" width="100%" />
+                  <Button type="submit" title="add" width="100%" />
                 </div>
               </form>
             </div>
