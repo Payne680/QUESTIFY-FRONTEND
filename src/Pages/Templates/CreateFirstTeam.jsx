@@ -9,6 +9,7 @@ import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
 import './CreateFirst.css';
 import { invitations } from '../../Api/auth';
+import Footerdesign from './Footerdesign';
 
 function CreateFirstTeam() {
   const [members, setMembers] = useState([]);
@@ -99,6 +100,7 @@ function CreateFirstTeam() {
             onClick={createWorkPlace}
           />
         </div>
+        <Footerdesign />
       </div>
     </div>
   );
