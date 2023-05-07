@@ -8,8 +8,9 @@ import quest from './quest.svg';
 import Header from '../../Components/Atoms/Headings/Header';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
+import { saveProject } from '../../Api/auth';
 import './CreateFirst.css';
-import { invitations } from '../../Api/auth';
+
 import Footerdesign from './Footerdesign';
 
 function CreateFirstTeam() {
@@ -21,7 +22,6 @@ function CreateFirstTeam() {
     const project = e.target.value;
     setProjects(project);
   };
-  console.log(projects);
 
   const handleInvite = (e) => {
     e.preventDefault();
@@ -33,8 +33,9 @@ function CreateFirstTeam() {
   };
 
   const createWorkPlace = () => {
-    invitations(members);
-    navi('/dashboard/board');
+    // invitations(members);
+    saveProject({ project: projects, members });
+    navi('dashboard/board');
   };
 
   function deleteInvitation(id) {
