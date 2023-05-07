@@ -11,22 +11,7 @@ function BoardPage() {
     {
       id: Date.now() + Math.random() * 2,
       title: 'ToDo',
-      cards: [
-        {
-          id: Date.now() + Math.random(),
-          title: 'Card 1',
-          task: [],
-          desc: 'Wassup malone',
-          date: '',
-        },
-        {
-          id: Date.now() + Math.random(),
-          title: 'Card 2',
-          task: [],
-          desc: 'Wassup Penn',
-          date: '',
-        },
-      ],
+      cards: [],
     },
   ]);
   const [target, setTarget] = useState({

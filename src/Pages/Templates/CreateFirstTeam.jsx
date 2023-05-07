@@ -21,6 +21,7 @@ function CreateFirstTeam() {
     const project = e.target.value;
     setProjects(project);
   };
+  console.log(projects);
 
   const handleInvite = (e) => {
     e.preventDefault();
@@ -32,7 +33,6 @@ function CreateFirstTeam() {
   };
 
   const createWorkPlace = () => {
-    console.log(members, projects);
     invitations(members);
     navi('/dashboard/board');
   };

@@ -6,6 +6,7 @@ import Header from '../../Components/Atoms/Headings/Header';
 import Button from '../../Components/Atoms/Buttons/Button';
 import Footerdesign from './Footerdesign';
 import { register } from '../../Api/auth';
+import PageLoader from './PageLoader/PageLoader';
 
 export default function Signup() {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +29,7 @@ export default function Signup() {
       <form onSubmit={handleSubmit}>
         <Header title="Sign up" />
         <p>Sign up and start managing your oraganization</p>
-        <p>{isLoading ? 'Loading...' : ''}</p>
+        <p>{isLoading ? <PageLoader /> : ''}</p>
         <Input type="text" placeholder="Username" name="name" required />
         <Input
           type="email"
