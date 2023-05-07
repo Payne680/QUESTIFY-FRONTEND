@@ -8,7 +8,7 @@ import { MoreHorizontal } from 'react-feather';
 import './Board.css';
 import Editable from '../Editable/Editable';
 import Dropdown from '../Dropdown/Dropdown';
-import Card from '../Components/Card/Card';
+import Card from '../Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);

@@ -11,9 +11,10 @@ import {
   Type,
   UserPlus,
 } from 'react-feather';
-import Modals from '../../Modal/Modal';
-import Editable from '../../Editable/Editable';
+
+import Editable from '../../../Editable/Editable';
 import './Cardinfo.css';
+import Modals from '../../Modal/Modal';
 
 function Cardinfo(props) {
   const { title, desc, date, tasks } = props.card;
