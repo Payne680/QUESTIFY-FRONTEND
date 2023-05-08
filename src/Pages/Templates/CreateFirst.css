@@ -1,0 +1,43 @@
+.invitations {
+  display: flex;
+  gap: 10px;
+  line-break: auto;
+}
+
+.cross {
+  cursor: pointer;
+  background-color: brown;
+  padding: 0.2rem;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.btn_email{
+  position: absolute;
+  top: -4px;
+  right: 14.7%;
+
+}
+
+.addTeam{
+  position: relative;
+}
+
+.form_control {
+  position: absolute;
+}
+
+.create_work {
+  width: 100%;
+}
+
+.team {
+  margin-top: 20%;
+}
+
+.btn_create_workspace {
+ margin-top: 7%;
+}
