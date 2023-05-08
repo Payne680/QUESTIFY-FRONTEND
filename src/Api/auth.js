@@ -19,3 +19,7 @@ export function getCurrentUser() {
 export function saveProject(title) {
   return httpClient.post('projects', title);
 }
+
+export function saveColumns(title) {
+  return httpClient.post('states', title);
+}

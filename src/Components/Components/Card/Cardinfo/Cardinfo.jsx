@@ -5,9 +5,9 @@
 import React from 'react';
 import {
   Calendar,
-  CheckSquare,
+  /*   CheckSquare, */
   List,
-  Trash,
+  /*   Trash, */
   Type,
   UserPlus,
 } from 'react-feather';
@@ -17,7 +17,7 @@ import './Cardinfo.css';
 import Modals from '../../Modal/Modal';
 
 function Cardinfo(props) {
-  const { title, desc, date, tasks } = props.card;
+  const { title, desc, date /* tasks */ } = props.card;
   return (
     <Modals onClose={() => props.onClose()}>
       <div className="cardinfo">
@@ -64,7 +64,7 @@ function Cardinfo(props) {
           />
         </div>
 
-        <div className="cardinfo-box">
+        {/*         <div className="cardinfo-box">
           <div className="cardinfo-box-title">
             <CheckSquare />
             Tasks
@@ -86,7 +86,7 @@ function Cardinfo(props) {
             placeholder="Enter task"
             buttonText="Add Task"
           />
-        </div>
+        </div> */}
 
         <div className="cardinfo-box">
           <div className="cardinfo-box-title">

@@ -17,11 +17,11 @@ body {
 
 .loader {
   border: 16px solid #e3e3e3;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #34db66;
   border-radius: 50%;
   width: 140px;
   height: 140px;
-  animation: spin 1s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 @keyframes spin {

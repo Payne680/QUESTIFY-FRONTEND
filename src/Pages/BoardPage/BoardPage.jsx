@@ -5,11 +5,11 @@ import './BoardPage.css';
 import Board from '../../Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
+import { saveColumns } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([
     {
-      id: Date.now() + Math.random() * 2,
       title: 'ToDo',
       cards: [],
     },
@@ -21,18 +21,17 @@ function BoardPage() {
 
   const addCard = (title, bid) => {
     const card = {
-      id: Date.now() + Math.random(),
       title,
-      lables: [],
-      task: [],
+      /*       lables: '',
       date: '',
-      desc: '',
+      desc: '', */
     };
     const index = boards.findIndex((item) => item.id === bid);
     if (index < 0);
     const tempBoards = [...boards];
     tempBoards[index].cards.push(card);
     setBoards(tempBoards);
+    saveColumns(boards);
   };
 
   const removeCard = (cid, bid) => {
@@ -51,7 +50,6 @@ function BoardPage() {
     setBoards([
       ...boards,
       {
-        id: Date.now() + Math.random(),
         title,
         cards: [],
       },
