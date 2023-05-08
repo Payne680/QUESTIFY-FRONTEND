@@ -2,19 +2,15 @@
 import React from 'react';
 import '../Atoms.css';
 
-function Input({ type, value, placeholder, name, onChange }) {
+export default function Input({ type, value, placeholder, className }) {
   return (
     <div>
       <input
+        className={className}
         type={type}
         value={value}
         placeholder={placeholder}
-        name={name}
-        required
-        onChange={onChange}
       />
     </div>
   );
 }
-
-export default Input;

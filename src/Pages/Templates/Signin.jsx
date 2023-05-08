@@ -1,16 +1,38 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Styles.css';
 import Header from '../../Components/Atoms/Headings/Header';
 import Button from '../../Components/Atoms/Buttons/Button';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Footerdesign from './Footerdesign';
+import { login } from '../../Api/auth';
+import { saveToken } from '../../utils';
 
 export default function Signin() {
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { target } = e;
+    const user = {
+      emailAddress: target.emailAddress.value,
+      password: target.password.value,
+    };
+    setIsLoading(true);
+    try {
+      const { data } = await login(user.emailAddress, user.password);
+      saveToken(data.token);
+      navigate('/dashboard');
+      window.location.reload(true);
+    } catch (event) {
+      if (event.response.status === 401) {
+        setError('Invalid username or passeword');
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="headz">
@@ -18,17 +40,21 @@ export default function Signin() {
         <Header title="Login" />
         <p>Login and start managing your oraganization</p>
         <p>{isLoading ? 'Loading...' : ''}</p>
-        <Input type="email" placeholder="Email Address" />
-        <Input type="password" placeholder="Password" />
+        {error && <p className="error">{error}</p>}
+        <Input
+          type="email"
+          placeholder="Email Address"
+          name="emailAddress"
+          required
+        />
+        <Input type="password" placeholder="Password" name="password" />
         <div className="linkz">
           <p>Forgot Password?</p>
           <Link className="titlez" to="/signup">
             <p className="accountz">No account? Sign Up</p>
           </Link>
         </div>
-        <Link to="/dashboard">
-          <Button title="Login" />
-        </Link>
+        <Button type="submit" title="Login" />
         {/* <p>
           Have an account?
           <Link className="linkz" to="/login">

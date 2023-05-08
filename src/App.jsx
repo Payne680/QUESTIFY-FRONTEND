@@ -6,6 +6,7 @@ import CreateFirstTeam from './Pages/Templates/CreateFirstTeam';
 import Landing from './Pages/Landing/Homepage';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
+import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="loader" element={<PageLoader />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route path="board" element={<BoardPage />} />
