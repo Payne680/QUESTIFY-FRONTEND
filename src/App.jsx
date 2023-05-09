@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
 import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 import Members from './Pages/Members/Members';
+import ProfilePage from './Pages/Profile/ProfilePage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="members" element={<Members />} />
           </Route>
           <Route path="login" element={<Signin />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </BrowserRouter>

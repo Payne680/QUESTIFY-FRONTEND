@@ -1,0 +1,61 @@
+.profilePage {
+  background-color: #f7f8fc;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.profilePage .rightSide {
+  min-width: 460px;
+}
+
+form {
+  min-width: 450px;
+}
+
+.text {
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+.head {
+  color: #224;
+  font-size: 22px;
+}
+
+.profileInfos {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.register {
+  line-height: 0.1;
+}
+
+.Input1 {
+  background: #fff;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  color: #000;
+  font-size: 17px;
+  height: 25px;
+  margin-top: -5px;
+  width: 100%;
+}
+
+.btn {
+  border-radius: 5px;
+  box-shadow: none;
+  margin-top: 70px;
+  width: 103%;
+}
