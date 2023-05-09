@@ -1,5 +1,7 @@
 body {
   background: #E5E5E5;
+  font-size: 'Mulish', sans-serif;
+  overflow: hidden;
 }
 
 :root {

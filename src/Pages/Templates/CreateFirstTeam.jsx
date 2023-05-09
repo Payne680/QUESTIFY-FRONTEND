@@ -36,6 +36,7 @@ function CreateFirstTeam() {
     // invitations(members);
     saveProject({ project: projects, members });
     /*    navi('/dashboard/board'); */
+    // eslint-disable-next-line
     console.log({ project: projects, members });
   };
 
