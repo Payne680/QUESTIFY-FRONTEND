@@ -1,14 +1,10 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable  */
 import React, { useState } from 'react';
 import { MoreHorizontal } from 'react-feather';
 import './Board.css';
 import Editable from '../Editable/Editable';
 import Dropdown from '../Dropdown/Dropdown';
-import Card from '../Components/Card/Card';
+import Card from '../Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -47,7 +43,7 @@ function Board(props) {
         ))}
         <Editable
           displayClass="board-cards-add"
-          text="Add Card"
+          text="Add items"
           placeholder="Enter Card Title"
           onSubmit={(value) => props.addCard(value, props.board?.id)}
         />

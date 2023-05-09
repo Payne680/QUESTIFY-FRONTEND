@@ -1,5 +1,5 @@
 .editable {
-    width: fit-content;
+    width: 100%;
 }
 
 .editable-display {
@@ -15,7 +15,6 @@
 
 .editable-edit {
     display: flex;
-    flex-direction: column;
 }
 
 .editable-edit input {

@@ -33,12 +33,6 @@
     font-weight: bold;
 }
 
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .card-footer svg {
     height: 14px;
     width: 14px;

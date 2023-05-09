@@ -1,10 +1,11 @@
-/* eslint-disable prefer-const */
-/* eslint-disable camelcase */
+/* eslint-disable*/
 import React, { useState } from 'react';
+import { PlusCircle } from 'react-feather';
 import './BoardPage.css';
 import Board from '../../Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
+import users from './profile.png';
 
 function BoardPage() {
   const [boards, setBoards] = useState([
@@ -100,7 +101,15 @@ function BoardPage() {
   return (
     <div className="board-page">
       <div className="board-page-navbar">
-        <Heading title="Questify" size="40px" color="White" />
+        <div className="titlez">
+          <Heading title="Questify" size="40px" color="White" />
+        </div>
+        <div className="users">
+          <img alt="person image" src={users} />
+          <img alt="person image" src={users} />
+          <img alt="person image" src={users} />
+          <PlusCircle />
+        </div>
       </div>
       <div className="board-page-outer">
         <div className="board-page-boards">
@@ -118,7 +127,7 @@ function BoardPage() {
           <div className="board-page-column">
             <Editable
               displayClass="board-page-column-add"
-              text="New Column"
+              text={<PlusCircle />}
               placeholder="Enter column title"
               onSubmit={(value) => addBoard(value)}
             />

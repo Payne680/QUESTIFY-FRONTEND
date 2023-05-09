@@ -12,7 +12,7 @@ import {
   UserPlus,
 } from 'react-feather';
 
-import Editable from '../../../Editable/Editable';
+import Editable from '../../Editable/Editable';
 import './Cardinfo.css';
 import Modals from '../../Modal/Modal';
 
@@ -70,7 +70,7 @@ function Cardinfo(props) {
             Tasks
           </div>
           <div className="cardinfo-box-progress-bar">
-            <div className="cardinfo-box-progress" style={{ width: '30%' }} />
+            <div className="cardinfo-box-progress" style={{ width: '40%' }} />
           </div>
           <div className="cardinfo-box-list">
             {tasks?.map((item) => (
