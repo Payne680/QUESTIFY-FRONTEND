@@ -1,0 +1,43 @@
+.taskPage {
+  background: #ffff;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+table {
+  border-top: 2px solid #ddd;
+  height: 200px;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.First {
+  background-color: aquamarine;
+  width: 40%;
+  text-align: center;
+}
+
+.infos {
+  position: relative;
+  right: 30%;
+}
+
+.material-symbols-outlined {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.box {
+  height: 20px;
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  height: 40px;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}

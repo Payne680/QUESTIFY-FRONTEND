@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
 import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 import ProfilePage from './Pages/Profile/ProfilePage';
+import TaskPage from './Pages/Task/TaskPage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           </Route>
           <Route path="login" element={<Signin />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="task" element={<TaskPage />} />
         </Routes>
       </div>
     </BrowserRouter>
