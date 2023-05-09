@@ -12,11 +12,13 @@ import Card from '../Components/Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className="board">
       <div className="board-top">
         <p className="board-top-title">
-          {props.board?.title} <span>{` ${props.board?.cards.length}`}</span>
+          {props.board?.title}{' '}
+          <span>{/* {` ${props.board?.cards.length}`} */}</span>
         </p>
         <div
           className="board-top-more"

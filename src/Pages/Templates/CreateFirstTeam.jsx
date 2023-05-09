@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-unescaped-entities */
 import { React, useState } from 'react';
-/* import { useNavigate } from 'react-router-dom'; */
+import { useNavigate } from 'react-router-dom';
 import quest from './quest.svg';
 import Header from '../../Components/Atoms/Headings/Header';
 import Input from '../../Components/Atoms/Inputs/Input';
@@ -16,7 +16,7 @@ import Footerdesign from './Footerdesign';
 function CreateFirstTeam() {
   const [members, setMembers] = useState([]);
   const [projects, setProjects] = useState();
-  /*   const navi = useNavigate(); */
+  const navi = useNavigate();
 
   const handleChange = (e) => {
     const project = e.target.value;
@@ -35,7 +35,7 @@ function CreateFirstTeam() {
   const createWorkPlace = () => {
     // invitations(members);
     saveProject({ project: projects, members });
-    /*    navi('/dashboard/board'); */
+    navi('/dashboard/board');
     console.log({ project: projects, members });
   };
 

@@ -1,16 +1,18 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable prefer-const */
 /* eslint-disable camelcase */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BoardPage.css';
 import Board from '../../Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
-import { saveColumns } from '../../Api/auth';
+import { getColumns, saveColumns } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([
     {
-      title: 'ToDo',
+      id: Date.now(),
+      title: 'TODO',
       cards: [],
     },
   ]);
@@ -18,6 +20,13 @@ function BoardPage() {
     cid: '',
     bid: '',
   });
+
+  const [columns, setColumns] = useState([]);
+
+  useEffect(() => {
+    getColumns().then(setColumns);
+    console.log(columns);
+  }, []);
 
   const addCard = (title, bid) => {
     const card = {
@@ -28,10 +37,14 @@ function BoardPage() {
     };
     const index = boards.findIndex((item) => item.id === bid);
     if (index < 0);
-    const tempBoards = [...boards];
+    let tempBoards = [...boards];
     tempBoards[index].cards.push(card);
     setBoards(tempBoards);
     saveColumns(boards);
+    tempBoards[index].length = 0;
+    const empty = tempBoards[index].length;
+    setBoards(empty);
+    console.log(empty);
   };
 
   const removeCard = (cid, bid) => {
@@ -102,9 +115,9 @@ function BoardPage() {
       </div>
       <div className="board-page-outer">
         <div className="board-page-boards">
-          {boards.map((item) => (
+          {columns?.map((item, i) => (
             <Board
-              key={item.id}
+              key={i}
               board={item}
               removeBoard={removeBoard}
               addCard={addCard}

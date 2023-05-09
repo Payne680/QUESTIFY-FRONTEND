@@ -23,3 +23,7 @@ export function saveProject(title) {
 export function saveColumns(title) {
   return httpClient.post('states', title);
 }
+
+export function getColumns() {
+  return httpClient.get('states').then(({ data }) => data);
+}
