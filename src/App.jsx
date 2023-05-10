@@ -20,11 +20,11 @@ export default function App() {
           <Route path="loader" element={<PageLoader />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
+            <Route path="profile" element={<ProfilePage />} />
             <Route path="board" element={<BoardPage />} />
             <Route path="members" element={<Members />} />
           </Route>
           <Route path="login" element={<Signin />} />
-          <Route path="profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </BrowserRouter>

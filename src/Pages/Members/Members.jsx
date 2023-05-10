@@ -1,14 +1,13 @@
-import { Sidebar } from 'react-feather';
 import './Member.css';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import Button from '../../Components/Atoms/Buttons/Button';
+import AuthGuard from '../../Components/services/AuthGuard';
 
-export default function Members() {
+function Members() {
   const name = 'Godden';
   const status = 'admin';
   return (
-    <div className="container">
-      <Sidebar />
-
+    <div className="memberContainer">
       <div className="member">
         <div className="memberField">
           <h3>{name}</h3>
@@ -28,6 +27,9 @@ export default function Members() {
           </button>
         </div>
       </div>
+      <Button title="Add member" />
     </div>
   );
 }
+
+export default AuthGuard(Members);
