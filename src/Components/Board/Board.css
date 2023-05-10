@@ -67,11 +67,13 @@
 .board-cards-add {
     width: 50%;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #556d6d;
+    color: #fff;
     border-radius: 15px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 .board-cards-add:hover {
     box-shadow: 1px 2px 1px green;
+    color: #000;
 }
