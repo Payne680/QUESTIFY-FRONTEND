@@ -12,8 +12,10 @@ import { saveProject } from '../../Api/auth';
 import './CreateFirst.css';
 
 import Footerdesign from './Footerdesign';
+import PageLoader from './PageLoader/PageLoader';
 
 function CreateFirstTeam() {
+  const [isloading, setIsloading] = useState(false);
   const [members, setMembers] = useState([]);
   const [projects, setProjects] = useState();
   const navi = useNavigate();
@@ -32,10 +34,19 @@ function CreateFirstTeam() {
     e.target.email.value = '';
   };
 
-  const createWorkPlace = () => {
+  const createWorkPlace = async () => {
     // invitations(members);
-    saveProject({ project: projects, members });
-    navi('/dashboard/board');
+    try {
+      setIsloading(true);
+      await saveProject({ project: projects, members });
+    } catch (e) {
+      if (e.response.status === 401) {
+        navi('create-first-team');
+      }
+    } finally {
+      setIsloading(false);
+    }
+
     console.log({ project: projects, members });
   };
 
@@ -49,6 +60,7 @@ function CreateFirstTeam() {
   return (
     <div>
       <div className="creatz">
+        <p>{isloading ? <PageLoader /> : ''}</p>
         <div>
           <img className="imagez" alt="" src={quest} />
         </div>
