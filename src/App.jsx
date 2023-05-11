@@ -7,9 +7,7 @@ import Landing from './Pages/Landing/Homepage';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
 import PageLoader from './Pages/Templates/PageLoader/PageLoader';
-import ProfilePage from './Pages/Profile/ProfilePage';
-import TaskPage from './Pages/Task/TaskPage';
-import Members from './Pages/Members/Members';
+import Page404 from './Pages/Page404/Page404';
 
 export default function App() {
   return (
@@ -26,7 +24,8 @@ export default function App() {
             <Route path="board" element={<BoardPage />} />
             <Route path="members" element={<Members />} />
           </Route>
-          <Route path="task" element={<TaskPage />} />
+          <Route path="login" element={<Signin />} />
+          <Route path="404-page" element={<Page404 />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -40,9 +40,9 @@ function Board(props) {
             key={item.id}
             card={item}
             removeCard={props.removeCard}
-            boardId={props.board?.id}
-            handleDrageEnd={props.handleDrageEnd}
-            handleDrageEnter={props.handleDrageEnter}
+            boardIndex={props.boardIndex}
+            handleDragEnd={props.handleDragEnd}
+            handleDragEnter={props.handleDragEnter}
           />
         ))}
         <Editable

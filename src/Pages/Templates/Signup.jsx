@@ -13,7 +13,7 @@ export default function Signup() {
   const [error] = useState('');
   const navigate = useNavigate();
 
-  /*   setInterval(() => {
+  /*  setInterval(() => {
     setIsLoading(true);
   }, 3000); */
 
@@ -22,9 +22,8 @@ export default function Signup() {
 
     const data = new FormData(e.currentTarget);
     const values = Object.fromEntries(data.entries());
-    /*    setInterval(); */
-
     await register(values);
+
     navigate('/create-first-team');
     setIsLoading(false);
   };
