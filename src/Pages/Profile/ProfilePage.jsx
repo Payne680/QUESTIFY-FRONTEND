@@ -17,15 +17,18 @@ function ProfilePage({ user }) {
             className="Input1"
             name="username"
             type="text"
-            defaultValue={user?.name}
+            value={user?.name}
           />
           <p className="text">Email Address</p>
           <Input
             className="Input1"
             name="email"
             type="email"
-            defaultValue={user?.emailAddress}
+            value={user?.emailAddress}
+            disabled="disabled"
           />
+          <p className="text">Password</p>
+          <Input className="Input1" name="password" type="password" />
           <Button className="btn" title="Edit User Infos" />
         </form>
       </div>

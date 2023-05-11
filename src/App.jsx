@@ -9,6 +9,7 @@ import BoardPage from './Pages/BoardPage/BoardPage';
 import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 import Members from './Pages/Members/Members';
 import ProfilePage from './Pages/Profile/ProfilePage';
+import InvitePage from './Pages/Templates/InvitePage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="signup" element={<Signup />} />
           <Route path="loader" element={<PageLoader />} />
+          <Route path="invite" element={<InvitePage />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route path="profile" element={<ProfilePage />} />

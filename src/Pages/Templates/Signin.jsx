@@ -28,7 +28,6 @@ export default function Signin() {
       console.log(user);
       saveToken(data);
       navigate('/dashboard');
-      window.location.reload(true);
     } catch (event) {
       if (event.response.status === 401) {
         setError('Invalid username or password');

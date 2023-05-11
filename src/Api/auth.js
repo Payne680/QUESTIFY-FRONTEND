@@ -12,8 +12,9 @@ export function invitations(email) {
   return httpClient.post('notifications', email);
 }
 
-export function getCurrentUser() {
-  return httpClient.get('users/current-user').then(({ data }) => data);
+export async function getCurrentUser() {
+  const { data } = await httpClient.get('users/current-user');
+  return data;
 }
 
 export function saveProject(title) {
