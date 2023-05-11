@@ -1,9 +1,6 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable */
 import { React, useState } from 'react';
-/* import { useNavigate } from 'react-router-dom'; */
+import { useNavigate } from 'react-router-dom';
 import quest from './quest.svg';
 import Header from '../../Components/Atoms/Headings/Header';
 import Input from '../../Components/Atoms/Inputs/Input';
@@ -12,11 +9,13 @@ import { saveProject } from '../../Api/auth';
 import './CreateFirst.css';
 
 import Footerdesign from './Footerdesign';
+import PageLoader from './PageLoader/PageLoader';
 
 function CreateFirstTeam() {
+  const [isloading, setIsloading] = useState(false);
   const [members, setMembers] = useState([]);
   const [projects, setProjects] = useState();
-  /*   const navi = useNavigate(); */
+  const navi = useNavigate();
 
   const handleChange = (e) => {
     const project = e.target.value;
@@ -32,10 +31,19 @@ function CreateFirstTeam() {
     e.target.email.value = '';
   };
 
-  const createWorkPlace = () => {
+  const createWorkPlace = async () => {
     // invitations(members);
-    saveProject({ project: projects, members });
-    /*    navi('/dashboard/board'); */
+    try {
+      setIsloading(true);
+      await saveProject({ project: projects, members });
+    } catch (e) {
+      if (e.response.status === 401) {
+        navi('create-first-team');
+      }
+    } finally {
+      setIsloading(false);
+    }
+
     console.log({ project: projects, members });
   };
 
@@ -49,6 +57,7 @@ function CreateFirstTeam() {
   return (
     <div>
       <div className="creatz">
+        <p>{isloading ? <PageLoader /> : ''}</p>
         <div>
           <img className="imagez" alt="" src={quest} />
         </div>

@@ -21,8 +21,12 @@ function Card(props) {
       <div
         className="card"
         draggable
-        onDragEnd={() => props.handleDragEnd(props.card?.id, props.boardId)}
-        onDragEnter={() => props.handleDragEnter(props.card?.id, props.boardId)}
+        onDragEnd={(ev) =>
+          props.handleDragEnd(props.card?.id, props.boardIndex, ev)
+        }
+        onDragEnter={() =>
+          props.handleDragEnter(props.card?.id, props.boardIndex)
+        }
         onClick={() => setShowModal(true)}
       >
         <div className="card-top">
@@ -39,7 +43,7 @@ function Card(props) {
                 <div className="card-dropdown">
                   <p
                     onClick={() =>
-                      props.removeCard(props.card?.id, props.boardId)
+                      props.removeCard(props.card?.id, props.boardIndex)
                     }
                   >
                     Delete task

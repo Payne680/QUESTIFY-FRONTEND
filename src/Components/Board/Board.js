@@ -1,8 +1,4 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable  */
 import React, { useState } from 'react';
 import { MoreHorizontal } from 'react-feather';
 import './Board.css';
@@ -12,8 +8,15 @@ import Card from '../Components/Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [tel, setSet] = useState();
+
+  useEffect(() => {
+    setSet(props.board?.cards);
+    console.log(tel);
+  }, []);
+
   return (
-    <div className="board">
+    <div className="board" data-index={props.boardIndex}>
       <div className="board-top">
         <p className="board-top-title">
           {props.board?.title} <span>{` ${props.board?.cards.length}`}</span>
@@ -40,9 +43,9 @@ function Board(props) {
             key={item.id}
             card={item}
             removeCard={props.removeCard}
-            boardId={props.board?.id}
-            handleDrageEnd={props.handleDrageEnd}
-            handleDrageEnter={props.handleDrageEnter}
+            boardIndex={props.board?.id}
+            handleDragEnd={props.handleDragEnd}
+            handleDragEnter={props.handleDragEnter}
           />
         ))}
         <Editable

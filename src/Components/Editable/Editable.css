@@ -1,12 +1,15 @@
 .editable {
-    width: fit-content;
+    width: 100%;
 }
 
 .editable-display {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     padding: 25px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: auto;
+    display: flex;
 }
 
 .editable-display:hover {
@@ -15,7 +18,6 @@
 
 .editable-edit {
     display: flex;
-    flex-direction: column;
 }
 
 .editable-edit input {
