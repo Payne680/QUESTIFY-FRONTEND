@@ -16,11 +16,38 @@ export default function TaskPage() {
               />
               Task{' '}
               <span className="material-symbols-outlined">arrow_upward</span>
+              <span className="material-symbols-outlined" id="more">
+                more_horiz
+              </span>
             </div>
           </th>
-          <th>Assignee</th>
-          <th>Due date</th>
-          <th>Priority</th>
+          <th>
+            <div className="infos">
+              Assignee{' '}
+              <span className="material-symbols-outlined">arrow_upward</span>
+              <span className="material-symbols-outlined" id="horiz">
+                more_horiz
+              </span>
+            </div>
+          </th>
+          <th>
+            <div className="infos">
+              Due date{' '}
+              <span className="material-symbols-outlined">arrow_upward</span>
+              <span className="material-symbols-outlined" id="horiz">
+                more_horiz
+              </span>
+            </div>
+          </th>
+          <th>
+            <div className="infos">
+              Priority{' '}
+              <span className="material-symbols-outlined">arrow_upward</span>
+              <span className="material-symbols-outlined" id="horizon">
+                more_horiz
+              </span>
+            </div>
+          </th>
         </tr>
         <tr>
           <td />

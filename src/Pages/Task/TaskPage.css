@@ -1,11 +1,13 @@
 .taskPage {
   background: #ffff;
   display: flex;
+  font-family: 'Mulish', sans-serif;
   min-height: 100vh;
   width: 100%;
 }
 
 table {
+  border-collapse: collapse;
   border-top: 2px solid #ddd;
   height: 200px;
   margin: 30px auto;
@@ -19,17 +21,76 @@ table {
 }
 
 .infos {
-  position: relative;
-  right: 30%;
+  align-items: center;
+  display: flex;
 }
 
 .material-symbols-outlined {
-  font-size: 15px;
+  color: #000;
   cursor: pointer;
+  font-size: 17px;
+  padding-left: 5px;
+}
+
+#horiz {
+  align-items: center;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  height: 25px;
+  left: 50%;
+  opacity: 0.09;
+  padding-right: 2px;
+  position: relative;
+  width: 8%;
+}
+
+#horizon {
+  align-items: center;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  height: 25px;
+  left: 50%;
+  opacity: 0.09;
+  padding-right: 3px;
+  position: relative;
+  width: 8%;
+}
+
+#horiz:hover {
+  color: #000;
+  opacity: 1;
+}
+
+#horizon:hover {
+  color: #000;
+  opacity: 1;
+}
+
+#more {
+  align-items: center;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  height: 25px;
+  left: 73%;
+  opacity: 0.09;
+  padding-right: 2px;
+  position: relative;
+  width: 4%;
+}
+
+#more:hover {
+  color: #000;
+  opacity: 1;
 }
 
 .box {
+  border: none;
+  cursor: pointer;
   height: 20px;
+  width: 3.5%;
 }
 
 th {

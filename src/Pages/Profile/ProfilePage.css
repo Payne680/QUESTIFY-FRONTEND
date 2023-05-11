@@ -16,12 +16,14 @@ form {
 }
 
 .text {
+  font-family: 'Mulish', sans-serif;
   margin-left: 10px;
   opacity: 0.5;
 }
 
 .head {
   color: #224;
+  font-family: 'Mulish', sans-serif;
   font-size: 22px;
 }
 
@@ -47,6 +49,7 @@ form {
   border: 1px solid darkgray;
   border-radius: 5px;
   color: #000;
+  font-family: 'Mulish', sans-serif;
   font-size: 17px;
   height: 25px;
   margin-top: -5px;
@@ -56,6 +59,7 @@ form {
 .btn {
   border-radius: 5px;
   box-shadow: none;
+  font-family: 'Mulish', sans-serif;
   margin-top: 70px;
   width: 103%;
 }
