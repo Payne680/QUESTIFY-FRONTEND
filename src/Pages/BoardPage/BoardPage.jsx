@@ -4,7 +4,7 @@ import './BoardPage.css';
 import Board from '../../Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
-import { getColumns, saveColumn } from '../../Api/auth';
+import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
@@ -69,9 +69,14 @@ function BoardPage() {
   };
 
   const removeBoard = (bid) => {
-    const tempBoards = boards.filter((item) => item.id !== bid);
+    const tempBoards = boards.filter((item) => {
+      return item.id !== bid;
+    });
 
     setBoards(tempBoards);
+    console.log(bid, 'okay');
+
+    deleteColumn(bid);
   };
 
   const handleDragEnd = (cid, boardIndex, ev) => {
@@ -104,6 +109,7 @@ function BoardPage() {
     tempBoards[parseInt(t_bIndex, 10)].cards.splice(0, 0, s_bIndex);
 
     setBoards(tempBoards);
+    console.log(tempBoards, 1315);
   };
 
   const handleDragEnter = (cid, bid) => {

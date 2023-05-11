@@ -42,3 +42,7 @@ export function getColumns() {
         ]
   );
 }
+
+export function deleteColumn(id) {
+  return httpClient.delete(`states/${id}`);
+}
