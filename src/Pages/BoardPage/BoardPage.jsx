@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import './BoardPage.css';
-import Board from '../../Components/Board/Board';
+import Board from '../../Components/Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
 import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
