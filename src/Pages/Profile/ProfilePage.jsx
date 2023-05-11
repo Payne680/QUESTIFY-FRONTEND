@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
 import './ProfilePage.css';
+// import AuthGuard from '../../Components/services/AuthGuard';
 
-export default function ProfilePage() {
+function ProfilePage({ user }) {
   return (
     <div className="profilePage">
       <div className="leftSide">
@@ -11,12 +13,20 @@ export default function ProfilePage() {
         <h2 className="subhead">Personal Information</h2>
         <form>
           <p className="text">UserName</p>
-          <Input className="Input1" name="username" type="text" />
+          <Input
+            className="Input1"
+            name="username"
+            type="text"
+            defaultValue={user?.name}
+          />
           <p className="text">Email Address</p>
-          <Input className="Input1" name="email" type="email" />
-          <p className="text">Password</p>
-          <Input className="Input1" name="password" type="password" />
-          <Button className="btn" title="Edit User Infos" />
+          <Input
+            className="Input1"
+            name="email"
+            type="email"
+            defaultValue={user?.emailAddress}
+          />
+          <Button className="btn" title="Edit" />
         </form>
       </div>
       <div className="rightSide">
@@ -31,3 +41,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+export default ProfilePage;

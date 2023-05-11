@@ -10,7 +10,7 @@ const httpClient = axios.create({
 
 httpClient.interceptors.request.use(
   (config) => {
-    config.headers['Authorization'] = `Bearer: ${readToken()}`;
+    config.headers['authorization'] = `Bearer: ${readToken()}`;
     return config;
   },
   (error) => {

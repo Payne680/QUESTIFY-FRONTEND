@@ -14,10 +14,17 @@ table {
   width: 90%;
 }
 
+th {
+  background: #eee;
+  color: #224957;
+  font-weight: 400;
+  padding-left: 10px;
+  text-align: left;
+}
+
 .First {
-  background-color: aquamarine;
   width: 40%;
-  text-align: center;
+  text-align: left;
 }
 
 .infos {
