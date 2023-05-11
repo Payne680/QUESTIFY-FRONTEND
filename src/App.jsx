@@ -10,6 +10,7 @@ import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 import Members from './Pages/Members/Members';
 import ProfilePage from './Pages/Profile/ProfilePage';
 import InvitePage from './Pages/Templates/InvitePage';
+import Page404 from './Pages/Page404/Page404';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Signin />} />
           <Route path="loader" element={<PageLoader />} />
           <Route path="invite" element={<InvitePage />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
@@ -27,6 +29,7 @@ export default function App() {
             <Route path="members" element={<Members />} />
           </Route>
           <Route path="login" element={<Signin />} />
+          <Route path="404-page" element={<Page404 />} />
         </Routes>
       </div>
     </BrowserRouter>

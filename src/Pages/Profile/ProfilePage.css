@@ -4,7 +4,8 @@
   display: flex;
   gap: 50px;
   justify-content: center;
-  min-height: 100vh;
+  max-height: 80vh;
+  width: 100%;
 }
 
 .profilePage .rightSide {
@@ -16,12 +17,22 @@ form {
 }
 
 .text {
+  font-family: 'Mulish', sans-serif;
   margin-left: 10px;
   opacity: 0.5;
 }
 
 .head {
   color: #224;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: -50px;
+}
+
+.subhead {
+  color: #224;
+  font-family: 'Mulish', sans-serif;
   font-size: 22px;
 }
 
@@ -47,6 +58,7 @@ form {
   border: 1px solid darkgray;
   border-radius: 5px;
   color: #000;
+  font-family: 'Mulish', sans-serif;
   font-size: 17px;
   height: 25px;
   margin-top: -5px;
@@ -56,6 +68,8 @@ form {
 .btn {
   border-radius: 5px;
   box-shadow: none;
-  margin-top: 70px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  margin-top: 40px;
   width: 103%;
 }

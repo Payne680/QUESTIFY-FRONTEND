@@ -1,8 +1,8 @@
 import './Member.css';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import Button from '../../Components/Atoms/Buttons/Button';
-import AuthGuard from '../../Components/services/AuthGuard';
-
+/* import AuthGuard from '../../Components/services/AuthGuard';
+ */
 function Members() {
   const name = 'Godden';
   const status = 'admin';
@@ -32,4 +32,4 @@ function Members() {
   );
 }
 
-export default AuthGuard(Members);
+export default Members;
