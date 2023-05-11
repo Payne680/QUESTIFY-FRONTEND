@@ -13,15 +13,19 @@ export default function Signup() {
   const [error] = useState('');
   const navigate = useNavigate();
 
+  /*  setInterval(() => {
+    setIsLoading(true);
+  }, 3000); */
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = new FormData(e.currentTarget);
     const values = Object.fromEntries(data.entries());
-    setIsLoading(true);
     await register(values);
-    setIsLoading(false);
+
     navigate('/create-first-team');
+    setIsLoading(false);
   };
 
   return (

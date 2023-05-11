@@ -19,3 +19,26 @@ export function getCurrentUser() {
 export function saveProject(title) {
   return httpClient.post('projects', title);
 }
+
+/* export function saveColumns(title) {
+  return httpClient.post('states', title);
+} */
+
+export function saveColumn(title) {
+  return httpClient.post('states', title);
+}
+
+export function getColumns() {
+  return httpClient.get('states').then(({ data }) =>
+    data.length > 0
+      ? data
+      : [
+          {
+            db_id: null,
+            id: Date.now(),
+            title: 'TODO',
+            cards: [],
+          },
+        ]
+  );
+}
