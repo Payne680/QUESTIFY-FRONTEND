@@ -16,7 +16,7 @@ function Board(props) {
   }, []);
 
   return (
-    <div className="board" data-index={props.boardIndex}>
+    <div className="board" >
       <div className="board-top">
         <p className="board-top-title">
           {props.board?.title} <span>{` ${props.board?.cards.length}`}</span>
@@ -38,12 +38,12 @@ function Board(props) {
         </div>
       </div>
       <div className="board-cards">
-        {props.board?.cards?.map((item) => (
+        {props.board?.cards?.map((item,index) => (
           <Card
-            key={item.id}
+            key={index}
             card={item}
             removeCard={props.removeCard}
-            boardIndex={props.board?.id}
+            boardId={props.board?.id}
             handleDragEnd={props.handleDragEnd}
             handleDragEnter={props.handleDragEnter}
           />

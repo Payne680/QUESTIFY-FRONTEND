@@ -8,6 +8,8 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import BoardPage from './Pages/BoardPage/BoardPage';
 import PageLoader from './Pages/Templates/PageLoader/PageLoader';
 import Page404 from './Pages/Page404/Page404';
+import ProfilePage from './Pages/Profile/ProfilePage';
+import Members from './Pages/Members/Members';
 
 export default function App() {
   return (

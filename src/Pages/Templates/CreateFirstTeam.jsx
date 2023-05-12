@@ -42,6 +42,7 @@ function CreateFirstTeam() {
       }
     } finally {
       setIsloading(false);
+      navi('/dashboard/board');
     }
 
     console.log({ project: projects, members });
@@ -117,7 +118,6 @@ function CreateFirstTeam() {
           </div>
         </div>
       </div>
-      <Footerdesign />
     </div>
   );
 }
