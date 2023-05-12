@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import './Styles.css';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Header from '../../Components/Atoms/Headings/Header';
 import Button from '../../Components/Atoms/Buttons/Button';
 import Footerdesign from './Footerdesign';
-import { register } from '../../Api/auth';
+import { confirmUser, register } from '../../Api/auth';
 import PageLoader from './PageLoader/PageLoader';
 
 export default function Signup() {
   const [isLoading, setIsLoading] = useState(false);
   const [error] = useState('');
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
   /*  setInterval(() => {
@@ -23,7 +24,10 @@ export default function Signup() {
     const data = new FormData(e.currentTarget);
     const values = Object.fromEntries(data.entries());
     await register(values);
-
+    if (searchParams.get('token')) {
+      await confirmUser(searchParams.get('token'));
+      navigate('/dashboard');
+    }
     navigate('/create-first-team');
     setIsLoading(false);
   };

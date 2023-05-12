@@ -21,7 +21,7 @@ export default function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Signin />} />
           <Route path="loader" element={<PageLoader />} />
-          <Route path="invite" element={<InvitePage />} />
+          <Route path="invite/:token" element={<InvitePage />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route path="profile" element={<ProfilePage />} />

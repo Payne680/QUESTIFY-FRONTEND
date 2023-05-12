@@ -29,6 +29,10 @@ export function saveColumn(title) {
   return httpClient.post('states', title);
 }
 
+export function getInvitee(token) {
+  return httpClient.get(`/notifications/verify`, { params: { token } });
+}
+
 export function getColumns() {
   return httpClient.get('states').then(({ data }) =>
     data.length > 0
@@ -42,4 +46,8 @@ export function getColumns() {
           },
         ]
   );
+}
+
+export function confirmUser(token) {
+  return httpClient.post('/notifications/confirm', { token });
 }

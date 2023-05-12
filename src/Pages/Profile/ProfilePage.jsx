@@ -3,7 +3,7 @@ import React from 'react';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
 import './ProfilePage.css';
-// import AuthGuard from '../../Components/services/AuthGuard';
+import AuthGuard from '../../Components/services/AuthGuard';
 
 function ProfilePage({ user }) {
   return (
@@ -43,4 +43,4 @@ function ProfilePage({ user }) {
   );
 }
 
-export default ProfilePage;
+export default AuthGuard(ProfilePage);

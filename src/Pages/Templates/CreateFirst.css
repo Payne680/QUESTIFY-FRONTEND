@@ -15,14 +15,13 @@
   align-items: center;
 }
 
-.btn_email{
+.btn_email {
   position: absolute;
   top: -4px;
   right: 14.7%;
-
 }
 
-.addTeam{
+.addTeam {
   position: relative;
 }
 
@@ -39,5 +38,9 @@
 }
 
 .btn_create_workspace {
- margin-top: 7%;
+  margin-top: 7%;
+}
+
+.infoz h1 {
+  margin: 20px;
 }
