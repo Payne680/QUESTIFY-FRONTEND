@@ -51,7 +51,7 @@ export default function Signup() {
         <Link className="titlez" to="/login">
           <p className="signz">Have an account? login</p>
         </Link>
-        <Button type="submit" title="Sign up" />
+        <Button type="submit" title="Sign up" className="signUp" />
       </form>
       <Footerdesign />
     </div>

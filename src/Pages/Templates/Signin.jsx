@@ -53,17 +53,11 @@ export default function Signin() {
         <Input type="password" placeholder="Password" name="password" />
         <div className="linkz">
           <p>Forgot Password?</p>
-          <Link className="titlez" to="/signup">
+          <Link className="titles" to="/signup">
             <p className="accountz">No account? Sign Up</p>
           </Link>
         </div>
-        <Button type="submit" title="Login" />
-        {/* <p>
-          Have an account?
-          <Link className="linkz" to="/login">
-            login
-          </Link>
-        </p> */}
+        <Button type="submit" title="Login" className="signIn" />
       </form>
       <Footerdesign />
     </div>
