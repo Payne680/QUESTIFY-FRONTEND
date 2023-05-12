@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import moment from 'moment/moment';
 import { BiSearch } from 'react-icons/bi';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';

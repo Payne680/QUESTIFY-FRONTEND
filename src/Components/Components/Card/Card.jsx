@@ -1,8 +1,4 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable  */
 import React, { useState } from 'react';
 import './Card.css';
 import { CheckSquare, Clock, MoreHorizontal } from 'react-feather';
