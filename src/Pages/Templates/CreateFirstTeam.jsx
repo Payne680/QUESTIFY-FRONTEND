@@ -32,7 +32,6 @@ function CreateFirstTeam() {
   };
 
   const createWorkPlace = async () => {
-    // invitations(members);
     try {
       setIsloading(true);
       await saveProject({ project: projects, members });
@@ -87,7 +86,12 @@ function CreateFirstTeam() {
                   name="email"
                 />
                 <div className="btn_email">
-                  <Button type="submit" title="add" width="100%" />
+                  <Button
+                    type="submit"
+                    title="add"
+                    width="50px"
+                    className="Add"
+                  />
                 </div>
               </form>
             </div>

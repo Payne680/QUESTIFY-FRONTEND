@@ -10,12 +10,12 @@ function Members() {
     <div className="memberContainer">
       <div className="member">
         <div className="memberField">
-          <h3>{name}</h3>
-          <p>Name</p>
+          <h3>userName</h3>
+          <p>{name}</p>
         </div>
         <div className="memberField">
-          <h3>{status}</h3>
-          <p>Status</p>
+          <h3>Status</h3>
+          <p>{status}</p>
         </div>
         <div className="memberFieldBtn">
           <button type="button" className="manageElt">

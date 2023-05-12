@@ -20,7 +20,7 @@ export default function Head() {
         <Paragraph title="The online collaborative whiteboard platform to bring teams together, anytime, anywhere." />
         <div className="butz">
           <Link to="/signup">
-            <Button title="Get Started" height="15px" width="20%" />
+            <Button title="Get Started" className="getStarted" />
           </Link>
         </div>
         <Paragraph
