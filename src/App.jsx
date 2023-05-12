@@ -26,9 +26,9 @@ export default function App() {
             <Route path="profile" element={<ProfilePage />} />
             <Route path="board" element={<BoardPage />} />
             <Route path="members" element={<Members />} />
+            <Route path="list" element={<TaskPage />} />
           </Route>
           <Route path="login" element={<Signin />} />
-          <Route path="task" element={<TaskPage />} />
           <Route path="404-page" element={<Page404 />} />
         </Routes>
       </div>

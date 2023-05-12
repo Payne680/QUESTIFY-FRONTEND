@@ -1,9 +1,10 @@
 .taskPage {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Mulish', sans-serif;
-  min-height: 100vh;
+  max-height: 80vh;
   width: 100%;
 }
 
@@ -15,7 +16,8 @@
   height: 50px;
   justify-content: space-between;
   padding: 10px;
-  margin: 10px;
+  line-height: 0.2;
+  margin: 10px auto;
   width: 90%;
 }
 

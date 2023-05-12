@@ -18,64 +18,18 @@ export default function TaskPage() {
           <p>{assignee}</p>
         </div>
         <div className="taskbox">
-          <h3>Task</h3>
+          <h3>Due date</h3>
           <p>{dueDate}</p>
         </div>
         <div className="taskbox">
-          <h3>Task</h3>
+          <h3>Priority</h3>
           <p>{priority}</p>
         </div>
-        <div className="taskBoxIco">
-          <span className="material-symbols-outlined">delete</span>
+        <div className="taskBoxIcon">
           <span className="material-symbols-outlined">edit_note</span>
+          <span className="material-symbols-outlined">delete</span>
         </div>
       </div>
-      {/* <table>
-        <tr>
-          <th className="First">
-            <div className="infos">
-              <input
-                className="box"
-                type="checkbox"
-                // name="select"
-                // id="selectAll"
-              />
-              Task{' '}
-              <span className="material-symbols-outlined">arrow_upward</span>
-              <span className="material-symbols-outlined" id="more">
-                more_horiz
-              </span>
-            </div>
-          </th>
-          <th>
-            <div className="infos">
-              Assignee{' '}
-              <span className="material-symbols-outlined">arrow_upward</span>
-              <span className="material-symbols-outlined" id="horiz">
-                more_horiz
-              </span>
-            </div>
-          </th>
-          <th>
-            <div className="infos">
-              Due date{' '}
-              <span className="material-symbols-outlined">arrow_upward</span>
-              <span className="material-symbols-outlined" id="horiz">
-                more_horiz
-              </span>
-            </div>
-          </th>
-          <th>
-            <div className="infos">
-              Priority{' '}
-              <span className="material-symbols-outlined">arrow_upward</span>
-              <span className="material-symbols-outlined" id="horizon">
-                more_horiz
-              </span>
-            </div>
-          </th>
-        </tr>
-      </table> */}
     </div>
   );
 }
