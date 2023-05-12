@@ -28,17 +28,20 @@ export function saveColumn(title) {
   return httpClient.post('states', title);
 }
 
-export function getColumns() {
-  return httpClient.get('states').then(({ data }) =>
-    data.length > 0
-      ? data
-      : [
-          {
-            db_id: null,
-            id: Date.now(),
-            title: 'TODO',
-            cards: [],
-          },
-        ]
-  );
+export async function getColumns() {
+  const { data } = await httpClient.get('states');
+  return data.length > 0
+    ? data
+    : [
+        {
+          db_id: null,
+          id: Date.now(),
+          title: 'TODO',
+          cards: [],
+        },
+      ];
+}
+
+export function deleteColumn(id) {
+  return httpClient.delete(`states/${id}`);
 }

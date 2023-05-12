@@ -64,30 +64,6 @@ function Cardinfo(props) {
           />
         </div>
 
-        {/*         <div className="cardinfo-box">
-          <div className="cardinfo-box-title">
-            <CheckSquare />
-            Tasks
-          </div>
-          <div className="cardinfo-box-progress-bar">
-            <div className="cardinfo-box-progress" style={{ width: '30%' }} />
-          </div>
-          <div className="cardinfo-box-list">
-            {tasks?.map((item) => (
-              <div key={item.id} className="cardinfo-task">
-                <input type="checkbox" defaultValue={item.completed} />
-                <p>{item.text}</p>
-                <Trash />
-              </div>
-            ))}
-          </div>
-          <Editable
-            text="Add task"
-            placeholder="Enter task"
-            buttonText="Add Task"
-          />
-        </div> */}
-
         <div className="cardinfo-box">
           <div className="cardinfo-box-title">
             <UserPlus />

@@ -1,19 +1,22 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from 'react';
+/* eslint-disable  */
+import React, { useEffect, useState } from 'react';
 import { MoreHorizontal } from 'react-feather';
 import './Board.css';
-import Editable from '../Editable/Editable';
-import Dropdown from '../Dropdown/Dropdown';
+import Editable from '../../Editable/Editable';
+import Dropdown from '../../Dropdown/Dropdown';
 import Card from '../Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [tel, setSet] = useState();
+
+  useEffect(() => {
+    setSet(props.board?.cards);
+    console.log(tel);
+  }, []);
+
   return (
-    <div className="board">
+    <div className="board" >
       <div className="board-top">
         <p className="board-top-title">
           {props.board?.title} <span>{` ${props.board?.cards.length}`}</span>
@@ -35,12 +38,12 @@ function Board(props) {
         </div>
       </div>
       <div className="board-cards">
-        {props.board?.cards?.map((item) => (
+        {props.board?.cards?.map((item,index) => (
           <Card
-            key={item.id}
+            key={index}
             card={item}
             removeCard={props.removeCard}
-            boardIndex={props.boardIndex}
+            boardId={props.board?.id}
             handleDragEnd={props.handleDragEnd}
             handleDragEnter={props.handleDragEnter}
           />
