@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Styles.css';
@@ -23,12 +25,13 @@ export default function Signin() {
     setIsLoading(true);
     try {
       const { data } = await login(user.emailAddress, user.password);
-      saveToken(data.token);
+      console.log(user);
+      saveToken(data);
       navigate('/dashboard');
       window.location.reload(true);
     } catch (event) {
       if (event.response.status === 401) {
-        setError('Invalid username or passeword');
+        setError('Invalid username or password');
       }
     } finally {
       setIsLoading(false);

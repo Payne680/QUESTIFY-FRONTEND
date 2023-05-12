@@ -16,10 +16,13 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Signin />} />
           <Route path="loader" element={<PageLoader />} />
           <Route path="create-first-team" element={<CreateFirstTeam />} />
           <Route path="dashboard" element={<Dashboard />}>
+            <Route path="profile" element={<ProfilePage />} />
             <Route path="board" element={<BoardPage />} />
+            <Route path="members" element={<Members />} />
           </Route>
           <Route path="login" element={<Signin />} />
           <Route path="404-page" element={<Page404 />} />

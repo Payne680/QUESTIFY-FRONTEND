@@ -1,0 +1,32 @@
+.memberContainer {
+  width: 100vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.member {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff98;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.memberFieldBtn {
+  display: flex;
+}
+
+.manageElt {
+  width: 3rem;
+}
+
+.memberContainer button {
+  justify-content: flex-end;
+}

@@ -13,7 +13,7 @@
 }
 
 .editable-display:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .editable-edit {
@@ -22,24 +22,24 @@
 }
 
 .editable-edit input {
-    border-radius: 3px;
-    outline: none;
-    font-size: 1rem;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1rem;
 }
 
 .editable-edit-footer button {
-    outline: none;
-    border: none;
-    color: #fff;
-    transition: 200ms;
-    width: 80%;
-    padding: 8px 18px;
+  outline: none;
+  border: none;
+  color: #fff;
+  transition: 200ms;
+  width: 80%;
+  padding: 8px 18px;
 }
 
 .editable-edit-footer button:hover {
-    background-color: #9cc9bf;
+  background-color: #9cc9bf;
 }
 
 .editable-edit svg {
-    cursor: pointer;
+  cursor: pointer;
 }

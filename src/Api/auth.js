@@ -13,7 +13,7 @@ export function invitations(email) {
 }
 
 export function getCurrentUser() {
-  return httpClient.get('current-user').then(({ data }) => data);
+  return httpClient.get('users/current-user').then(({ data }) => data);
 }
 
 export function saveProject(title) {

@@ -1,19 +1,20 @@
 input {
-    width: 300px;
-    height: 45px;
-    border-radius: 10px;
-    background: #224957;
-    color: #fff;
-    margin: 11px;
-    padding: 10px;
-    border: 1px solid #224957;
-    font-family: "lexand Deca";
-    letter-spacing: 1.2px;
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  background: #224957;
+  color: #fff;
+  margin: 11px;
+  padding: 10px;
+  border: 1px solid #224957;
+  font-family: 'lexand Deca';
+  letter-spacing: 1.2px;
 }
 ::placeholder {
-    color: #fff;
-    opacity: 0.6;
+  color: #fff;
+  opacity: 0.6;
 }
+
 button {
     width: 300px;
     height: 45px;
