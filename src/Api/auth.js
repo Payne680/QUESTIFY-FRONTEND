@@ -4,6 +4,10 @@ export function register(name, emailAddress, password) {
   return httpClient.post('users', name, emailAddress, password);
 }
 
+export function getMembers(member) {
+  return httpClient.get('users', member);
+}
+
 export function login(emailAddress, password) {
   return httpClient.post('users/login', { emailAddress, password });
 }

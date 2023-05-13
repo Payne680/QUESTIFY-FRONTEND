@@ -147,4 +147,4 @@ function BoardPage() {
   );
 }
 
-export default AuthGuard(BoardPage);
+export default BoardPage;

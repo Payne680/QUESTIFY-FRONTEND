@@ -24,12 +24,7 @@ export default function Signup() {
 
     const user = new FormData(e.currentTarget);
     const values = Object.fromEntries(user.entries());
-    const tokenValues = {
-      emailAddress: values.emailAddress,
-      password: values.password,
-    };
-    register(values);
-    saveToken(tokenValues);
+    register(values).then(({ data: { token } }) => saveToken(token));
     if (searchParams.get('token')) {
       await confirmUser(searchParams.get('token'));
       navigate('/dashboard');
