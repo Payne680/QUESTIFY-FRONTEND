@@ -7,6 +7,7 @@ import Button from '../../Components/Atoms/Buttons/Button';
 import Footerdesign from './Footerdesign';
 import { confirmUser, register } from '../../Api/auth';
 import PageLoader from './PageLoader/PageLoader';
+import { saveToken } from '../../utils';
 
 export default function Signup() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,15 +22,22 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = new FormData(e.currentTarget);
-    const values = Object.fromEntries(data.entries());
-    await register(values);
+    const user = new FormData(e.currentTarget);
+    const values = Object.fromEntries(user.entries());
+    const tokenValues = {
+      emailAddress: values.emailAddress,
+      password: values.password,
+    };
+    register(values);
+    saveToken(tokenValues);
     if (searchParams.get('token')) {
       await confirmUser(searchParams.get('token'));
       navigate('/dashboard');
+
+      setIsLoading(false);
+    } else {
+      navigate('/create-first-team');
     }
-    navigate('/create-first-team');
-    setIsLoading(false);
   };
 
   return (

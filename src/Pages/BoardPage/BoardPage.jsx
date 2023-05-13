@@ -5,6 +5,7 @@ import Board from '../../Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
 import { getColumns, saveColumn } from '../../Api/auth';
+import AuthGuard from '../../Components/services/AuthGuard';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
@@ -148,4 +149,4 @@ function BoardPage() {
   );
 }
 
-export default BoardPage;
+export default AuthGuard(BoardPage);

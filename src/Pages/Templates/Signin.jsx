@@ -32,7 +32,6 @@ export default function Signin() {
     setIsLoading(true);
     try {
       const { data } = await login(user.emailAddress, user.password);
-      console.log(user);
       saveToken(data);
 
       if (searchParams.get('token')) {

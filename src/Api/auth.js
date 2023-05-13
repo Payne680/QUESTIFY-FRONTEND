@@ -1,7 +1,7 @@
 import { httpClient } from './axios';
 
-export function register(user) {
-  return httpClient.post('users', user);
+export function register(name, emailAddress, password) {
+  return httpClient.post('users', name, emailAddress, password);
 }
 
 export function login(emailAddress, password) {
