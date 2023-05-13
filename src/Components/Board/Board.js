@@ -8,6 +8,7 @@ import Card from '../Components/Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [popupClick, setPopupClick] = useState(false);
   const [tel, setSet] = useState();
 
   useEffect(() => {

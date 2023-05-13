@@ -9,10 +9,10 @@ export default function Attribute() {
     <div className="attributes">
       <img className="logoz" alt="" src={logo} />
       <Link to="/signup">
-        <Button title="Sign up" width="90%" />
+        <Button title="Sign up" width="80px" />
       </Link>
       <Link to="/login">
-        <Button title="login" width="110%" />
+        <Button title="login" width="80px" />
       </Link>
     </div>
   );

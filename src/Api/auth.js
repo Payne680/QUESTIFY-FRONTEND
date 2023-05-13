@@ -12,6 +12,10 @@ export function invitations(email) {
   return httpClient.post('notifications', email);
 }
 
+export function getInvitee(token) {
+  return httpClient.get(`/notifications/verify`, { params: { token } });
+}
+
 export async function getCurrentUser() {
   const { data } = await httpClient.get('users/current-user');
   return data;
@@ -29,23 +33,22 @@ export function saveColumn(title) {
   return httpClient.post('states', title);
 }
 
-export function getInvitee(token) {
-  return httpClient.get(`/notifications/verify`, { params: { token } });
+export async function getColumns() {
+  const { data } = await httpClient.get('states');
+  return data.length > 0
+    ? data
+    : [
+        {
+          db_id: null,
+          id: Date.now(),
+          title: 'TODO',
+          cards: [],
+        },
+      ];
 }
 
-export function getColumns() {
-  return httpClient.get('states').then(({ data }) =>
-    data.length > 0
-      ? data
-      : [
-          {
-            db_id: null,
-            id: Date.now(),
-            title: 'TODO',
-            cards: [],
-          },
-        ]
-  );
+export function deleteColumn(id) {
+  return httpClient.delete(`states/${id}`);
 }
 
 export function confirmUser(token) {

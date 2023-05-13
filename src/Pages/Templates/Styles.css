@@ -46,29 +46,32 @@ h2 {
 }
 
 p {
-  height: 20px;
   font-family: 'lexand Deca';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 30px;
   color: #224957;
 }
 
 .accountz {
   display: flex;
+  text-decoration: underline;
 }
 
 .linkz {
-  /* color: #76b1a6; */
   display: flex;
-  justify-content: space-between;
-  width: 300px;
-  margin-left: 23px;
+  justify-content: space-evenly;
+  width: 90%;
+  gap: 50px;
+  margin: -15px auto;
 }
 
 .signz {
-  padding-left: 150px;
+  position: relative;
+  left: 25%;
+  text-decoration: underline;
+  margin: 50px auto;
 }
 
 .titlez {
@@ -96,6 +99,18 @@ p {
   padding: 0.6% 0%;
   color: #fff;
   font-size: 0.8em;
+}
+
+.signUp {
+  margin-top: -30px;
+}
+
+.signIn {
+  margin-top: 20px;
+}
+
+.creatWork {
+  margin: 20px;
 }
 
 .footer .row a {

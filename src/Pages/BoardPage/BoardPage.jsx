@@ -1,11 +1,11 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import './BoardPage.css';
-import Board from '../../Components/Board/Board';
+import Board from '../../Components/Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
-import { getColumns, saveColumn } from '../../Api/auth';
 import AuthGuard from '../../Components/services/AuthGuard';
+import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
@@ -70,40 +70,39 @@ function BoardPage() {
   };
 
   const removeBoard = (bid) => {
-    const tempBoards = boards.filter((item) => item.id !== bid);
+    const tempBoards = boards.filter((item) => {
+      return item.id !== bid;
+    });
 
     setBoards(tempBoards);
+    console.log(bid, 'okay');
+
+    deleteColumn(bid);
   };
 
-  const handleDragEnd = (cid, boardIndex, ev) => {
-    console.log(ev, target);
-    let s_bIndex = boardIndex;
-    let s_cIndex = cid;
-    let t_bIndex = ev.target.closest('.board').getAttribute('data-index');
+  const handleDragEnd = (cid, bid) => {
+    console.log(cid, bid);
+    let s_bIndex;
+    let s_cIndex;
+    let t_bIndex; /* = ev.target.closest('.board').getAttribute('data-index'); */
+    let t_cIndex;
 
-    /*    s_bIndex = boards.findIndex((item) => item.id === bid);
+    s_bIndex = boards.indexOf((item) => item.id === bid);
     if (s_bIndex < 0)
-      s_cIndex = boards[s_bIndex].cards?.findIndex((item) => item.id === cid);
+      s_cIndex = boards[s_bIndex].cards?.indexOf((item) => item.id === cid);
     if (s_cIndex < 0)
-      t_bIndex = boards.findIndex((item) => item.id === target.bid);
+      t_bIndex = boards.indexOf((item) => item.id === target.bid);
     if (t_bIndex < 0)
       t_cIndex = boards[t_bIndex].cards?.findIndex(
         (item) => item.id === target.cid
       );
-    if (t_cIndex < 0) */
+    if (t_cIndex < 0) return;
     const tempBoards = [...boards];
-
     const tempCard = tempBoards[s_bIndex].cards[s_cIndex];
-    console.log(
-      s_bIndex,
-      parseInt(t_bIndex, 10),
-      boards.length,
-      tempCard,
-      s_cIndex
-    );
-    tempBoards[s_bIndex].cards.splice(s_cIndex, 1);
-    tempBoards[parseInt(t_bIndex, 10)].cards.splice(0, 0, s_bIndex);
 
+    tempBoards[s_bIndex].cards.splice(s_cIndex, 1);
+    tempBoards[t_bIndex]?.cards?.splice(t_cIndex, 0, tempCard);
+    console.log('ffyfjfdtrduytfy', tempCard);
     setBoards(tempBoards);
   };
 
@@ -130,7 +129,6 @@ function BoardPage() {
               removeCard={removeCard}
               handleDragEnd={handleDragEnd}
               handleDragEnter={handleDragEnter}
-              boardIndex={i}
             />
           ))}
           <div className="board-page-column">

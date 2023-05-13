@@ -2,9 +2,35 @@ import React from 'react';
 import './TaskPage.css';
 
 export default function TaskPage() {
+  const task = 'Design home page';
+  const assignee = 'Mesmer';
+  const dueDate = 'Jully 11 2024';
+  const priority = 'High';
   return (
     <div className="taskPage">
-      <table>
+      <div className="taskContain">
+        <div className="taskbox">
+          <h3>Task</h3>
+          <p>{task}</p>
+        </div>
+        <div className="taskbox">
+          <h3>Assignee</h3>
+          <p>{assignee}</p>
+        </div>
+        <div className="taskbox">
+          <h3>Task</h3>
+          <p>{dueDate}</p>
+        </div>
+        <div className="taskbox">
+          <h3>Task</h3>
+          <p>{priority}</p>
+        </div>
+        <div className="taskBoxIco">
+          <span className="material-symbols-outlined">delete</span>
+          <span className="material-symbols-outlined">edit_note</span>
+        </div>
+      </div>
+      {/* <table>
         <tr>
           <th className="First">
             <div className="infos">
@@ -49,37 +75,7 @@ export default function TaskPage() {
             </div>
           </th>
         </tr>
-        <tr>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-      </table>
+      </table> */}
     </div>
   );
 }

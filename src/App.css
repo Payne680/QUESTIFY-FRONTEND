@@ -1,7 +1,6 @@
 body {
   background: #E5E5E5;
   font-size: 'Mulish', sans-serif;
-  overflow: hidden;
 }
 
 :root {
@@ -27,7 +26,6 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Public Sans', sans-serif;
-  overflow: hidden;
 }
 
 .theme-container {

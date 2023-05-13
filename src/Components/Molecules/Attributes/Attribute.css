@@ -1,8 +1,8 @@
 .attributes {
-  display: flex;
-  gap: 4px;
-  justify-content: right;
   align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
 }
 
 .logoz {

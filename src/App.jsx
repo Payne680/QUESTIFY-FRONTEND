@@ -11,6 +11,7 @@ import Members from './Pages/Members/Members';
 import ProfilePage from './Pages/Profile/ProfilePage';
 import InvitePage from './Pages/Templates/InvitePage';
 import Page404 from './Pages/Page404/Page404';
+import TaskPage from './Pages/Task/TaskPage';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="members" element={<Members />} />
           </Route>
           <Route path="login" element={<Signin />} />
+          <Route path="task" element={<TaskPage />} />
           <Route path="404-page" element={<Page404 />} />
         </Routes>
       </div>
