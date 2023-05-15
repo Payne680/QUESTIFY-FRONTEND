@@ -63,7 +63,7 @@ function CreateFirstTeam() {
         </div>
         <div className="infoz">
           <Header title="Welcome to Questify" />
-          <h2>
+          <h2 className='create'>
             let's create your workspace. A space for teams to collaborate,
             organize, and share project boards.
           </h2>
@@ -74,8 +74,9 @@ function CreateFirstTeam() {
               placeholder="Questify Workspace"
               name="project"
               onChange={handleChange}
+              className="input2"
             />
-            <p>You can also edit this name in your work space </p>
+            <p>You can also edit this name in your work space</p>
 
             <div className="form_control">
               <p className="inputx">Who's on your team? </p>
@@ -84,12 +85,14 @@ function CreateFirstTeam() {
                   type="text"
                   placeholder="Enter as many email address as you want..."
                   name="email"
+                  className="input2"
                 />
                 <div className="btn_email">
                   <Button
                     type="submit"
-                    title="add"
-                    width="50px"
+                    title="Add"
+                    width="80px"
+                    height="25px"
                     className="Add"
                   />
                 </div>
@@ -117,6 +120,7 @@ function CreateFirstTeam() {
             <Button
               type="submit"
               title="Create your workspace"
+              className='createWork'
               onClick={createWorkPlace}
             />
           </div>
