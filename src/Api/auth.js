@@ -58,7 +58,3 @@ export function deleteColumn(id) {
 export function confirmUser(token) {
   return httpClient.post('/notifications/confirm', { token });
 }
-
-export function confirmUser(token) {
-  return httpClient.post('/notifications/confirm', { token });
-}
