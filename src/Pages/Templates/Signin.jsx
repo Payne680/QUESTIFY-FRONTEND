@@ -1,19 +1,26 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 import './Styles.css';
 import Header from '../../Components/Atoms/Headings/Header';
 import Button from '../../Components/Atoms/Buttons/Button';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Footerdesign from './Footerdesign';
-import { login } from '../../Api/auth';
+import { confirmUser, login } from '../../Api/auth';
 import { saveToken } from '../../utils';
 
 export default function Signin() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  console.log(searchParams.get('token'));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,10 +32,12 @@ export default function Signin() {
     setIsLoading(true);
     try {
       const { data } = await login(user.emailAddress, user.password);
-      console.log(user);
       saveToken(data);
+
+      if (searchParams.get('token')) {
+        await confirmUser(searchParams.get('token'));
+      }
       navigate('/dashboard');
-      window.location.reload(true);
     } catch (event) {
       if (event.response.status === 401) {
         setError('Invalid username or password');

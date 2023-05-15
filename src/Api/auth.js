@@ -1,7 +1,11 @@
 import { httpClient } from './axios';
 
-export function register(user) {
-  return httpClient.post('users', user);
+export function register(name, emailAddress, password) {
+  return httpClient.post('users', name, emailAddress, password);
+}
+
+export function getMembers(member) {
+  return httpClient.get('users', member);
 }
 
 export function login(emailAddress, password) {
@@ -12,8 +16,13 @@ export function invitations(email) {
   return httpClient.post('notifications', email);
 }
 
-export function getCurrentUser() {
-  return httpClient.get('users/current-user').then(({ data }) => data);
+export function getInvitee(token) {
+  return httpClient.get(`/notifications/verify`, { params: { token } });
+}
+
+export async function getCurrentUser() {
+  const { data } = await httpClient.get('users/current-user');
+  return data;
 }
 
 export function saveProject(title) {
@@ -44,4 +53,12 @@ export async function getColumns() {
 
 export function deleteColumn(id) {
   return httpClient.delete(`states/${id}`);
+}
+
+export function confirmUser(token) {
+  return httpClient.post('/notifications/confirm', { token });
+}
+
+export function confirmUser(token) {
+  return httpClient.post('/notifications/confirm', { token });
 }

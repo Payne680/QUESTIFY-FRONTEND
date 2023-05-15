@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import './Styles.css';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Header from '../../Components/Atoms/Headings/Header';
 import Button from '../../Components/Atoms/Buttons/Button';
 import Footerdesign from './Footerdesign';
-import { register } from '../../Api/auth';
+import { confirmUser, register } from '../../Api/auth';
 import PageLoader from './PageLoader/PageLoader';
+import { saveToken } from '../../utils';
 
 export default function Signup() {
   const [isLoading, setIsLoading] = useState(false);
   const [error] = useState('');
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
   /*  setInterval(() => {
@@ -20,12 +22,17 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = new FormData(e.currentTarget);
-    const values = Object.fromEntries(data.entries());
-    await register(values);
+    const user = new FormData(e.currentTarget);
+    const values = Object.fromEntries(user.entries());
+    register(values).then(({ data: { token } }) => saveToken(token));
+    if (searchParams.get('token')) {
+      await confirmUser(searchParams.get('token'));
+      navigate('/dashboard');
 
-    navigate('/create-first-team');
-    setIsLoading(false);
+      setIsLoading(false);
+    } else {
+      navigate('/create-first-team');
+    }
   };
 
   return (

@@ -15,16 +15,13 @@
   align-items: center;
 }
 
-.create {
-  margin: 25px;
+.btn_email {
+  position: absolute;
+  top: -4px;
+  right: 14.7%;
 }
 
-.input2 {
-  bottom: 20%;
-  border-radius: 5px;
-  height: 32px;
-  left: 3%;
-  margin: 0;
+.addTeam {
   position: relative;
 }
 
@@ -59,9 +56,13 @@
 }
 
 .btn_create_workspace {
- margin-top: 7%;
+  margin-top: 7%;
+}
+
+.infoz h1 {
+  margin: 20px;
 }
 
 .createWork {
-  
+
 }

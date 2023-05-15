@@ -4,6 +4,7 @@ import './BoardPage.css';
 import Board from '../../Components/Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
+import AuthGuard from '../../Components/services/AuthGuard';
 import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
 
 function BoardPage() {
@@ -80,7 +81,7 @@ function BoardPage() {
   };
 
   const handleDragEnd = (cid, bid) => {
-    console.log(cid,bid)
+    console.log(cid, bid);
     let s_bIndex;
     let s_cIndex;
     let t_bIndex; /* = ev.target.closest('.board').getAttribute('data-index'); */
@@ -101,9 +102,8 @@ function BoardPage() {
 
     tempBoards[s_bIndex].cards.splice(s_cIndex, 1);
     tempBoards[t_bIndex]?.cards?.splice(t_cIndex, 0, tempCard);
-console.log('ffyfjfdtrduytfy', tempCard);
+    console.log('ffyfjfdtrduytfy', tempCard);
     setBoards(tempBoards);
-
   };
 
   const handleDragEnter = (cid, bid) => {

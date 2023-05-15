@@ -35,10 +35,9 @@ function CreateFirstTeam() {
     try {
       setIsloading(true);
       await saveProject({ project: projects, members });
+      navi('/dashboard/board');
     } catch (e) {
-      if (e.response.status === 401) {
-        navi('create-first-team');
-      }
+      console.error(e);
     } finally {
       setIsloading(false);
       navi('/dashboard/board');

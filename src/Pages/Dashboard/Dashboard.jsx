@@ -3,6 +3,7 @@ import moment from 'moment/moment';
 import { BiSearch } from 'react-icons/bi';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import Sidebar from '../../Components/Organisms/Sidebar/Sidebar';
+import AuthGuard from '../../Components/services/AuthGuard';
 import './Dashboard.css';
 import geek from './geekman.png.png';
 

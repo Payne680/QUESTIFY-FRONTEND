@@ -3,7 +3,7 @@ import React from 'react';
 import Input from '../../Components/Atoms/Inputs/Input';
 import Button from '../../Components/Atoms/Buttons/Button';
 import './ProfilePage.css';
-// import AuthGuard from '../../Components/services/AuthGuard';
+import AuthGuard from '../../Components/services/AuthGuard';
 
 function ProfilePage({ user }) {
   return (
@@ -17,14 +17,15 @@ function ProfilePage({ user }) {
             className="Input1"
             name="username"
             type="text"
-            defaultValue={user?.name}
+            value={user?.name}
           />
           <p className="text">Email Address</p>
           <Input
             className="Input1"
             name="email"
             type="email"
-            defaultValue={user?.emailAddress}
+            value={user?.emailAddress}
+            disabled="disabled"
           />
           <Button className="btn" title="Edit" />
         </form>
@@ -42,4 +43,4 @@ function ProfilePage({ user }) {
   );
 }
 
-export default ProfilePage;
+export default AuthGuard(ProfilePage);

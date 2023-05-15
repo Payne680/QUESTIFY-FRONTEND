@@ -1,33 +1,49 @@
 import './Member.css';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 import Button from '../../Components/Atoms/Buttons/Button';
+import { getMembers } from '../../Api/auth';
 /* import AuthGuard from '../../Components/services/AuthGuard';
  */
 function Members() {
-  const name = 'Godden';
-  const status = 'admin';
+  const [members, setMembers] = useState();
+  useEffect(() => {
+    getMembers().then(({ data }) => {
+      setMembers(data);
+    });
+  }, []);
+
   return (
     <div className="memberContainer">
-      <div className="member">
-        <div className="memberField">
-          <h3>userName</h3>
-          <p>{name}</p>
-        </div>
-        <div className="memberField">
-          <h3>Status</h3>
-          <p>{status}</p>
-        </div>
-        <div className="memberFieldBtn">
-          <button type="button" className="manageElt">
-            <FaEdit />
-          </button>
-          <hr />
-          <button type="button" className="manageElt">
-            <FaTrashAlt />
-          </button>
-        </div>
+      <div className="button">
+        <Button title="Add member" />
       </div>
-      <Button title="Add member" />
+
+      <div className=" scroll">
+        {members?.map((member) => {
+          return (
+            <div className="member" key={member.id}>
+              <div className="memberField">
+                <h3 className="h3">{member.name}</h3>
+                <p>UserName</p>
+              </div>
+              <div className="memberField">
+                {member.is_admin ? <h3>admin</h3> : <h3>user</h3>}
+                <p>Status</p>
+              </div>
+              <div className="memberFieldBtn">
+                <button type="button" className="manageElt">
+                  <FaEdit />
+                </button>
+                <hr />
+                <button type="button" className="manageElt">
+                  <FaTrashAlt />
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
