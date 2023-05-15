@@ -1,53 +1,36 @@
-.invitations {
+.creatz {
+  /* align-items: center; */
   display: flex;
-  gap: 10px;
-  line-break: auto;
+  justify-content: center;
+  width: 100%;
 }
 
-.cross {
-  cursor: pointer;
-  background-color: brown;
-  padding: 0.2rem;
-  color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
+.infoz {
+  
 }
 
-.btn_email {
-  position: absolute;
-  top: -4px;
-  right: 14.7%;
+.input2 {
+  margin: 0 auto;
+}
+
+.welcome {
+  font-size: 50px;
 }
 
 .addTeam {
-  position: relative;
-}
-
-.btn_email{
-  /* position: absolute;
-  top: -4px;
-  right: 14.7%; */
-}
-
-.addTeam{
   display: flex;
-  gap: 10px;
-  right: 18%;
-  position: relative;
+  gap: 5px;
 }
 
 .Add {
   border-radius: 5px;
-  margin-bottom: 2px;
 }
 
 .form_control {
-  /* position: absolute; */
+  min-width: 100%;
 }
 
-.create_work {
+/* .create_work {
   width: 100%;
 }
 
@@ -61,8 +44,14 @@
 
 .infoz h1 {
   margin: 20px;
+} */
+
+.create {
+  width: 90%;
 }
 
 .createWork {
-
+  margin-top: 20px;
+  position: relative;
+  right: 25%;
 }
