@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './TaskPage.css';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { getColumns } from '../../Api/auth';
+import ModalAddCurrency from '../../Components/Components/Modal/Modal/ModalTransfer';
+import DeleteTask from '../../Components/Components/Modal/Modal/DeleteTask';
 
 export default function TaskPage() {
   const [task, setTask] = useState();
+  const [AddCurrency, setAddcurrency] = useState(false);
+  const [deleteTasks, setDeleteTask] = useState(false);
   useEffect(() => {
     getColumns().then(setTask);
   }, []);
@@ -12,6 +16,10 @@ export default function TaskPage() {
 
   return (
     <div className="taskPage scroll">
+      {AddCurrency === true && (
+        <ModalAddCurrency setAddcurrency={setAddcurrency} />
+      )}
+      {deleteTasks === true && <DeleteTask setDeleteTask={setDeleteTask} />}
       {task?.map((item) => {
         return (
           <div className="carding" key={item.id}>
@@ -35,11 +43,23 @@ export default function TaskPage() {
                     <p>priority</p>
                   </div>
                   <div className="memberFieldBtn">
-                    <button type="button" className="manageElt">
+                    <button
+                      type="button"
+                      className="manageElt"
+                      onClick={() => {
+                        setAddcurrency(true);
+                      }}
+                    >
                       <FaEdit />
                     </button>
                     <hr />
-                    <button type="button" className="manageElt">
+                    <button
+                      type="button"
+                      className="manageElt"
+                      onClick={() => {
+                        setDeleteTask(true);
+                      }}
+                    >
                       <FaTrashAlt />
                     </button>
                   </div>
