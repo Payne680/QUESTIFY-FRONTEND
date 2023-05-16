@@ -54,7 +54,7 @@ function CreateFirstTeam() {
   }
 
   return (
-    <div>
+    <div className=''>
       <div className="creatz">
         <p>{isloading ? <PageLoader /> : ''}</p>
         <div>
@@ -62,7 +62,7 @@ function CreateFirstTeam() {
         </div>
         <div className="infoz">
           <Header title="Welcome to Questify" />
-          <h2 className='create'>
+          <h2 className="create">
             let's create your workspace. A space for teams to collaborate,
             organize, and share project boards.
           </h2>
@@ -91,7 +91,7 @@ function CreateFirstTeam() {
                     type="submit"
                     title="Add"
                     width="80px"
-                    height="25px"
+                    height="27.5px"
                     className="Add"
                   />
                 </div>
@@ -116,12 +116,13 @@ function CreateFirstTeam() {
             <p>
               Invite your team members so they can see what you are working on.
             </p>
-            <Button
-              type="submit"
-              title="Create your workspace"
-              className='createWork'
-              onClick={createWorkPlace}
-            />
+            <div className="createWork">
+              <Button
+                type="submit"
+                title="Create your workspace"
+                onClick={createWorkPlace}
+              />
+            </div>
           </div>
         </div>
       </div>

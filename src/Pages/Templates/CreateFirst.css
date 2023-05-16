@@ -17,8 +17,8 @@
 
 .btn_email {
   position: absolute;
-  top: -4px;
-  right: 14.7%;
+  right: 4%;
+  
 }
 
 .addTeam {
@@ -34,7 +34,7 @@
 .addTeam{
   display: flex;
   gap: 10px;
-  right: 18%;
+  right: 25%;
   position: relative;
 }
 
@@ -49,6 +49,7 @@
 
 .create_work {
   width: 100%;
+  
 }
 
 .team {
@@ -64,5 +65,6 @@
 }
 
 .createWork {
-
+display: flex;
+justify-content: flex-start;
 }
