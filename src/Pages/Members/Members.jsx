@@ -3,18 +3,23 @@ import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import Button from '../../Components/Atoms/Buttons/Button';
 import { getMembers } from '../../Api/auth';
-/* import AuthGuard from '../../Components/services/AuthGuard';
- */
+import PageLoader from '../Templates/PageLoader/PageLoader';
+import AuthGuard from '../../Components/services/AuthGuard';
+
 function Members() {
   const [members, setMembers] = useState();
+  const [isloading, setIsloading] = useState(false);
   useEffect(() => {
+    setIsloading(true);
     getMembers().then(({ data }) => {
       setMembers(data);
+      setIsloading(false);
     });
   }, []);
 
   return (
     <div className="memberContainer">
+      <p>{isloading ? <PageLoader /> : ''}</p>
       <div className="button">
         <Button title="Add member" />
       </div>
@@ -48,4 +53,4 @@ function Members() {
   );
 }
 
-export default Members;
+export default AuthGuard(Members);

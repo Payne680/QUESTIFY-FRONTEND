@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getCurrentUser } from '../../Api/auth';
+import PageLoader from '../../Pages/Templates/PageLoader/PageLoader';
 
 let currentUser;
 
@@ -24,7 +25,7 @@ export default function AuthGuard(Component) {
         });
     }, [navigate, user]);
 
-    return user ? <Component {...props} user={user} /> : <>loading...</>;
+    return user ? <Component {...props} user={user} /> : <PageLoader />;
   }
 
   return Guard;

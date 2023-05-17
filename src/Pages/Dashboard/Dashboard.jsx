@@ -7,8 +7,12 @@ import AuthGuard from '../../Components/services/AuthGuard';
 import './Dashboard.css';
 import geek from './geekman.png.png';
 
-function Dashboard() {
+function Dashboard({ user }) {
   const { pathname } = useLocation();
+
+  /*   useEffect(() => {
+    getCurrentUser().then(setUser)
+  }, []); */
 
   return (
     <div className="container">
@@ -35,8 +39,8 @@ function Dashboard() {
           <div className="profile">
             <img alt="person image" src={geek} />
             <div className="details">
-              <span>KCPM_TECH</span>
-              <span>kcpm_tech680@gmail.com</span>
+              <span>{user.name}</span>
+              <span>{user.emailAddress}</span>
             </div>
           </div>
         </div>
@@ -49,4 +53,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default AuthGuard(Dashboard);

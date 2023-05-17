@@ -9,6 +9,7 @@ import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
+  const [user, setUser] = useState();
   const [target, setTarget] = useState({
     cid: '',
     bid: '',
@@ -17,6 +18,7 @@ function BoardPage() {
     getColumns().then(setBoards);
   }, []);
   console.log(boards);
+  console.log(user);
 
   const addCard = (title, bid) => {
     const card = {
@@ -147,4 +149,4 @@ function BoardPage() {
   );
 }
 
-export default BoardPage;
+export default AuthGuard(BoardPage);
