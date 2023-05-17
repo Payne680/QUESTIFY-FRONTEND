@@ -8,6 +8,7 @@ import React from 'react';
 import './Modal.css';
 import './Transfer.css';
 import Button from '../../../Atoms/Buttons/Button';
+// import { deleteOneTask } from '../../../../Api/auth';
 
 export default function deleteTask({ setDeleteTask }) {
   return (
@@ -27,7 +28,11 @@ export default function deleteTask({ setDeleteTask }) {
             <Button title="Cancel" className="pool2" />
           </div>
           <div className="addButton">
-            <button type="submit" className="pool pool2">
+            <button
+              type="submit"
+              className="pool pool2"
+              // onClick={deleteOneTask(taskID)}
+            >
               Confirm
             </button>
           </div>

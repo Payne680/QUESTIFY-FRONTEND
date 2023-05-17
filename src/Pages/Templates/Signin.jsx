@@ -14,6 +14,7 @@ import Input from '../../Components/Atoms/Inputs/Input';
 import Footerdesign from './Footerdesign';
 import { confirmUser, login } from '../../Api/auth';
 import { saveToken } from '../../utils';
+import PageLoader from './PageLoader/PageLoader';
 
 export default function Signin() {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,13 +30,15 @@ export default function Signin() {
       emailAddress: target.emailAddress.value,
       password: target.password.value,
     };
-    setIsLoading(true);
+
     try {
+      setIsLoading(true);
       const { data } = await login(user.emailAddress, user.password);
       saveToken(data);
 
       if (searchParams.get('token')) {
         await confirmUser(searchParams.get('token'));
+        setIsLoading(false);
       }
       navigate('/dashboard');
     } catch (event) {
@@ -48,6 +51,7 @@ export default function Signin() {
   };
   return (
     <div className="headz">
+      <p>{isLoading ? <PageLoader /> : ''}</p>
       <form onSubmit={handleSubmit}>
         <Header title="Login" />
         <p>Login and start managing your oraganization</p>

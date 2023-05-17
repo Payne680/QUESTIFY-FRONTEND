@@ -58,3 +58,11 @@ export function deleteColumn(id) {
 export function confirmUser(token) {
   return httpClient.post('/notifications/confirm', { token });
 }
+
+export function editOneTask(id) {
+  return httpClient.patch(`tasks/${id}`);
+}
+
+export function deleteOneTask(id) {
+  return httpClient.delete(`tasks/${id}`);
+}

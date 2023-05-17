@@ -3,21 +3,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import {
-  Calendar,
-  /*   CheckSquare, */
-  List,
-  /*   Trash, */
-  Type,
-  UserPlus,
-} from 'react-feather';
+import { Type } from 'react-feather';
 
 import Editable from '../../../Editable/Editable';
 import './Cardinfo.css';
 import Modals from '../../Modal/Modal';
 
 function Cardinfo(props) {
-  const { title, desc, date /* tasks */ } = props.card;
+  const { title /* tasks */ } = props.card;
+
   return (
     <Modals onClose={() => props.onClose()}>
       <div className="cardinfo">
@@ -36,7 +30,7 @@ function Cardinfo(props) {
           </div>
         </div>
 
-        <div className="cardinfo-box">
+        {/* <div className="cardinfo-box">
           <div className="cardinfo-box-title">
             <List />
             Description
@@ -76,7 +70,7 @@ function Cardinfo(props) {
               buttonText="Add assignees"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </Modals>
   );
