@@ -6,6 +6,7 @@ export default function PageLoader() {
     <div id="root">
       <div className="loader-wrapper">
         <div className="loader" />
+        <p className="loader_title">Loading....</p>
       </div>
     </div>
   );

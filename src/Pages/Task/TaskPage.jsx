@@ -4,18 +4,24 @@ import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { getColumns } from '../../Api/auth';
 import ModalAddCurrency from '../../Components/Components/Modal/Modal/ModalTransfer';
 import DeleteTask from '../../Components/Components/Modal/Modal/DeleteTask';
+import PageLoader from '../Templates/PageLoader/PageLoader';
 
 export default function TaskPage() {
   const [task, setTask] = useState();
   const [AddCurrency, setAddcurrency] = useState(false);
   const [deleteTasks, setDeleteTask] = useState(false);
+  const [isloading, setIsloading] = useState(false);
+
   useEffect(() => {
+    setIsloading(true);
     getColumns().then(setTask);
+    setIsloading(false);
   }, []);
   console.log(task);
 
   return (
     <div className="taskPage scroll">
+      <p>{isloading ? <PageLoader /> : ''}</p>
       {AddCurrency === true && (
         <ModalAddCurrency setAddcurrency={setAddcurrency} />
       )}

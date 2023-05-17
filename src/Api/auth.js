@@ -25,6 +25,11 @@ export async function getCurrentUser() {
   return data;
 }
 
+export async function getCurrentUsers() {
+  const { data } = await httpClient.get('users');
+  return data;
+}
+
 export function saveProject(title) {
   return httpClient.post('projects', title);
 }

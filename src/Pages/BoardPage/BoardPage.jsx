@@ -5,18 +5,21 @@ import Board from '../../Components/Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
 import AuthGuard from '../../Components/services/AuthGuard';
-import { deleteColumn, getColumns, saveColumn } from '../../Api/auth';
+import { deleteColumn, getColumns, getCurrentUsers, saveColumn } from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
+  const [user, setUser] = useState();
   const [target, setTarget] = useState({
     cid: '',
     bid: '',
   });
   useEffect(() => {
     getColumns().then(setBoards);
+    getCurrentUsers().then(setUser)
   }, []);
   console.log(boards);
+  console.log(user);
 
   const addCard = (title, bid) => {
     const card = {
@@ -147,4 +150,4 @@ function BoardPage() {
   );
 }
 
-export default BoardPage;
+export default AuthGuard(BoardPage);
