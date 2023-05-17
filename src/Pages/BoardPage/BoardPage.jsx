@@ -4,8 +4,12 @@ import './BoardPage.css';
 import Board from '../../Components/Components/Board/Board';
 import Heading from '../../Components/Atoms/Headings/Heading';
 import Editable from '../../Components/Editable/Editable';
-import AuthGuard from '../../Components/services/AuthGuard';
-import { deleteColumn, getColumns, getCurrentUsers, saveColumn } from '../../Api/auth';
+import {
+  deleteColumn,
+  getColumns,
+  getCurrentUsers,
+  saveColumn,
+} from '../../Api/auth';
 
 function BoardPage() {
   const [boards, setBoards] = useState([]);
@@ -16,7 +20,7 @@ function BoardPage() {
   });
   useEffect(() => {
     getColumns().then(setBoards);
-    getCurrentUsers().then(setUser)
+    getCurrentUsers().then(setUser);
   }, []);
   console.log(boards);
   console.log(user);
@@ -150,4 +154,4 @@ function BoardPage() {
   );
 }
 
-export default AuthGuard(BoardPage);
+export default BoardPage;

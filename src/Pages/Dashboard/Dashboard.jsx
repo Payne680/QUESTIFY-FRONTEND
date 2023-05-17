@@ -6,13 +6,15 @@ import Sidebar from '../../Components/Organisms/Sidebar/Sidebar';
 import AuthGuard from '../../Components/services/AuthGuard';
 import './Dashboard.css';
 import geek from './geekman.png.png';
+import { useEffect, useState } from 'react';
+import { getCurrentUser, getCurrentUsers } from '../../Api/auth';
 
-function Dashboard({ user }) {
+function Dashboard() {
   const { pathname } = useLocation();
-
-  /*   useEffect(() => {
-    getCurrentUser().then(setUser)
-  }, []); */
+  const [user, setUser] = useState();
+  useEffect(() => {
+    getCurrentUser().then(setUser);
+  }, []);
 
   return (
     <div className="container">
@@ -39,8 +41,8 @@ function Dashboard({ user }) {
           <div className="profile">
             <img alt="person image" src={geek} />
             <div className="details">
-              <span>{user.name}</span>
-              <span>{user.emailAddress}</span>
+              <span>{user?.name}</span>
+              <span>{user?.emailAddress}</span>
             </div>
           </div>
         </div>
@@ -53,4 +55,4 @@ function Dashboard({ user }) {
   );
 }
 
-export default AuthGuard(Dashboard);
+export default Dashboard;
