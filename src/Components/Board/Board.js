@@ -1,5 +1,5 @@
 /* eslint-disable  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MoreHorizontal } from 'react-feather';
 import './Board.css';
 import Editable from '../Editable/Editable';
@@ -8,6 +8,7 @@ import Card from '../Components/Card/Card';
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [popupClick, setPopupClick] = useState(false);
   const [tel, setSet] = useState();
 
   useEffect(() => {
